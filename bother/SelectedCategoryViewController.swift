@@ -7,14 +7,16 @@
 
 import UIKit
 import FirebaseAuth
+import FCAlertView
 
 class SelectedCategoryViewController: UIViewController {
     
     
     // TODO: Can be anything without violence, sex, terrorism, etc.
+    // TODO: When create user, go to correct page with correct info.
     
     // MARK: - Variables
-    var categoryId = Int()
+    var selectedMainCategory : Int = 0
     var isDailyBotherFinished = false
     
     
@@ -61,9 +63,12 @@ class SelectedCategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        botherArray.removeSubrange(2..<botherArray.count)
-      
         
+
+        
+        
+        
+        botherArray.removeSubrange(2..<botherArray.count)
         if let savedBother = UserDefaults.standard.value(forKey: "currentStory") as? String {
             botherArray.append(savedBother)
         }
@@ -75,6 +80,8 @@ class SelectedCategoryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         checkAuthForBtnAlpha()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
+
         
     }
     
@@ -88,6 +95,25 @@ class SelectedCategoryViewController: UIViewController {
         }
     }
     
+    @objc func showSuccessView(){
+        DispatchQueue.main.async {
+            let alert = FCAlertView()
+            let homeImage = UIImage(systemName: "house", withConfiguration: nil)
+            DispatchQueue.main.async {
+                alert.showAlert(inView: self,
+                                withTitle: "Done",
+                                withSubtitle: "Spend some time. You'll see there's a lot of people around you, bothered with something.",
+                                withCustomImage: homeImage,
+                                withDoneButtonTitle: "Done",
+                                andButtons: ["Done"]) // Set your button titles here
+                alert.dismissOnOutsideTouch = true
+                alert.colorScheme = .red // Replace "Blue" with your preferred color from the image above
+                alert.titleColor = .purple
+                alert.subTitleColor = .orange
+                alert.cornerRadius = 4
+             }
+        }
+    }
 }
 
 
@@ -113,7 +139,7 @@ extension SelectedCategoryViewController: UITableViewDelegate, ActionYesOrNoDele
             self.tableView.reloadData()
         } else {
             DispatchQueue.main.async {
-                self.openSignInViewController()
+                self.openSignInViewController(selectedMainCategory: self.selectedMainCategory)
             }
         }
     }

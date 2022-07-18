@@ -11,5 +11,6 @@ target 'bother' do
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
   pod 'FCAlertView'
+  pod 'IQKeyboardManagerSwift'
 
 end

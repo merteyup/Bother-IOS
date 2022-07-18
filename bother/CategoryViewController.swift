@@ -41,7 +41,7 @@ class CategoryViewController: UIViewController {
 extension CategoryViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        openSelectedCategory(categoryId: indexPath.row)
+        openSelectedCategory(selectedMainCategory: indexPath.row)
     }
     
 }

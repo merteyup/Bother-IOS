@@ -35,36 +35,38 @@ extension UIViewController {
         self.present(vc, animated: true, completion: nil);
     }
     
-    func openSelectedCategory(categoryId: Int){
+    func openSelectedCategory(selectedMainCategory: Int){
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
         let vc: SelectedCategoryViewController = storyboard.instantiateViewController(withIdentifier: "SelectedCategoryViewControllerID") as! SelectedCategoryViewController;
         
         vc.modalPresentationCapturesStatusBarAppearance = true
         vc.modalPresentationStyle = .overFullScreen;
-        vc.categoryId = categoryId;
+        vc.selectedMainCategory = selectedMainCategory;
         
         self.present(vc, animated: true, completion: nil);
     }
     
-    func openSignUpViewController(){
+    func openSignUpViewController(selectedMainCategory: Int){
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
         let vc: SignUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewControllerID") as! SignUpViewController;
         
         vc.modalPresentationCapturesStatusBarAppearance = true
         vc.modalPresentationStyle = .overFullScreen;
-        
+        vc.selectedMainCategory = selectedMainCategory
+
         self.present(vc, animated: true, completion: nil);
     }
     
-    func openSignInViewController(){
+    func openSignInViewController(selectedMainCategory: Int){
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
         let vc: SignInViewController = storyboard.instantiateViewController(withIdentifier: "SignInViewControllerID") as! SignInViewController;
         
         vc.modalPresentationCapturesStatusBarAppearance = true
         vc.modalPresentationStyle = .overFullScreen;
+        vc.selectedMainCategory = selectedMainCategory
         
         self.present(vc, animated: true, completion: nil);
     }

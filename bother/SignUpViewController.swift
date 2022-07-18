@@ -8,28 +8,34 @@
 import UIKit
 import FirebaseAuth
 
+
 class SignUpViewController: UIViewController {
     
+    
+    // MARK: - Variables
+    var selectedMainCategory : Int = 0
+
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
 
     
     // MARK: - Actions
-    @IBAction func actionBack(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
+   
+    
     
     // MARK: - Statements
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-      /*  if Auth.auth().currentUser != nil {
+     
+        /*
+       if Auth.auth().currentUser != nil {
             DispatchQueue.main.async {
-                self.openCategoryPage()
+                self.openSelectedCategory(categoryId: selectedMainCategory)
             }
         }
-        */
+         */
+        
         
     }
     
@@ -43,7 +49,6 @@ class SignUpViewController: UIViewController {
             }
         }
     }
-    
     
     // MARK: - Functions
     // TODO: Move this into signUpHelper.signUp()
@@ -62,16 +67,14 @@ class SignUpViewController: UIViewController {
             BotherUser.shared.setFirebaseUID(firebaseUID: uid)
             BotherUser.shared.setDailyBotherLimit(dailyBotherLimit: 10)
                 // TODO:
-                DispatchQueue.main.async {
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MySubclassedTabBarControllerID") as! MySubclassedTabBarController;
-                    vc.selectedIndex = 0
-                    vc.modalPresentationCapturesStatusBarAppearance = true
-                    vc.modalPresentationStyle = .overFullScreen;
-                    self.present(vc, animated: false, completion: nil);
-                }
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "newUserCreated"), object: selectedMainCategory, userInfo: nil);
+            print("AlertButtonWorked")
+            dismiss(animated: true) {
+                self.openSelectedCategory(selectedMainCategory: self.selectedMainCategory)
+            }
+            
         } else {
-            print ("Error: User Not Found")
+            print ("Error: User Not Created")
         }
     }
 }
@@ -98,16 +101,20 @@ extension SignUpViewController : UITableViewDataSource {
 extension SignUpViewController: SignUpPageCell1Delegate {
     
     func signUpClicked() {
-      // TODO: Move this into selectedCategoryHelper.signUp()
+        // TODO: Move this into selectedCategoryHelper.signUp()
         if let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? SignUpPageCell1 {
             if let email = cell.txtEmail.text {
                 if let password = cell.txtPassword.text {
-                   Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                       self.createUpdateUserObject()
-                       print("SignUp")
-                   }
-               }
-           }
+                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                        self.createUpdateUserObject()
+                        print("SignUp")
+                    }
+                } else {
+                    ("Print: There's no Password. Enter mail address")
+                }
+            } else {
+                ("Print: There's no email. Enter mail address")
+            }
         }
     }
 }

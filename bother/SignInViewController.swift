@@ -15,7 +15,7 @@ class SignInViewController: UIViewController {
     
     
     // MARK: - Variables
-
+    var selectedMainCategory : Int = 0
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -25,10 +25,16 @@ class SignInViewController: UIViewController {
         dismiss(animated: true)
     }
     
+    
+    @IBAction func actionRegister(_ sender: Any) {
+        openSignUpViewController(selectedMainCategory: selectedMainCategory)
+    }
+    
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("SelectedMainCategory1: \(selectedMainCategory)")
 
     }
     

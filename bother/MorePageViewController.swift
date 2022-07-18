@@ -39,7 +39,7 @@ extension MorePageViewController : UITableViewDelegate {
         
         if indexPath.row == 0 {
             
-            openSignUpViewController()
+            openSignUpViewController(selectedMainCategory: 0)
             
         } else if indexPath.row == 1 {
             
