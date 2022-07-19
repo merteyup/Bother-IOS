@@ -82,7 +82,19 @@ extension UIViewController {
         self.present(vc, animated: true, completion: nil);
     }
     
+    
+    
 }
+
+
+extension NSObject{
+    
+    func runAfterDelay(_ delay: TimeInterval, block: @escaping ()->()) {
+        let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        DispatchQueue.main.asyncAfter(deadline: time, execute: block)
+    }
+}
+
 
 
 extension String {

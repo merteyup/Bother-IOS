@@ -22,6 +22,9 @@ class SignUpViewController: UIViewController {
     
     // MARK: - Actions
    
+    @IBAction func actionBack(_ sender: Any) {
+        dismiss(animated: true)
+    }
     
     
     // MARK: - Statements
@@ -65,7 +68,7 @@ class SignUpViewController: UIViewController {
             }
             BotherUser.shared.setEmail(email: email)
             BotherUser.shared.setFirebaseUID(firebaseUID: uid)
-            BotherUser.shared.setDailyBotherLimit(dailyBotherLimit: 10)
+            BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: 30)
                 // TODO:
             NotificationCenter.default.post(name: Notification.Name(rawValue: "newUserCreated"), object: selectedMainCategory, userInfo: nil);
             print("AlertButtonWorked")

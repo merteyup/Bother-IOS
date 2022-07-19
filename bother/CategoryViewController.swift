@@ -13,15 +13,7 @@ class CategoryViewController: UIViewController {
     // TODO: Work on main categories.
     
     // MARK: - Variables
-    var categoryArray : [String] = ["Technology",
-                                    "Health",
-                                    "Daily Life",
-                                    "Hobbies",
-                                    "Transportation",
-                                    "Restaurants & Cafes",
-                                    "Business Life",
-                                    "Relationships",
-                                    "Random"]
+    
 
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!

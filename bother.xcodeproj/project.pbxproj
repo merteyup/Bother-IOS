@@ -33,6 +33,8 @@
 		C4CD0B8C2884AD7000F4667F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CD0B8A2884AD7000F4667F /* Main.storyboard */; };
 		C4CD0B8E2884AD7100F4667F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CD0B8D2884AD7100F4667F /* Assets.xcassets */; };
 		C4CD0B912884AD7100F4667F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CD0B8F2884AD7100F4667F /* LaunchScreen.storyboard */; };
+		C4DF5E02288734B800E50813 /* ViewBackgroundFWriteStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */; };
+		C4DF5E04288739DD00E50813 /* WriteYourOwnStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 		C4CD0B8D2884AD7100F4667F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4CD0B902884AD7100F4667F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4CD0B922884AD7100F4667F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackgroundFWriteStory.swift; sourceTree = "<group>"; };
+		C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteYourOwnStoryCell.swift; sourceTree = "<group>"; };
 		DB1CF4A7707CF083F885D16F /* Pods-bother.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bother.release.xcconfig"; path = "Target Support Files/Pods-bother/Pods-bother.release.xcconfig"; sourceTree = "<group>"; };
 		E36C5B525F90288A9F3747A4 /* Pods_bother.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bother.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,6 +148,8 @@
 				C45CD59A2884B0B800760438 /* SignUpViewController.swift */,
 				C45CD58F2884B0B600760438 /* SMButtonBackground.swift */,
 				C45CD59B2884B0B800760438 /* WriteOwnStoryViewController.swift */,
+				C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */,
+				C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */,
 			);
 			path = bother;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C45CD5A52884B0B900760438 /* CategoryViewController.swift in Sources */,
+				C4DF5E02288734B800E50813 /* ViewBackgroundFWriteStory.swift in Sources */,
 				C45CD5AE2884B0B900760438 /* WriteOwnStoryViewController.swift in Sources */,
 				C45CD5B12884B0B900760438 /* SignUpPageCell1.swift in Sources */,
 				C45CD5A12884B0B900760438 /* GlobalVariables.swift in Sources */,
@@ -279,6 +286,7 @@
 				C45CD5AF2884B0B900760438 /* ExampleCodes.swift in Sources */,
 				C45CD5AA2884B0B900760438 /* SignInViewController.swift in Sources */,
 				C45CD5A62884B0B900760438 /* CategoryTableViewCell.swift in Sources */,
+				C4DF5E04288739DD00E50813 /* WriteYourOwnStoryCell.swift in Sources */,
 				C45CD5A82884B0B900760438 /* ButtonBackground.swift in Sources */,
 				C45CD5A42884B0B900760438 /* BotherUser.swift in Sources */,
 				C45CD5AC2884B0B900760438 /* MorePageViewController.swift in Sources */,

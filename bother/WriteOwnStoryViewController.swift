@@ -11,39 +11,43 @@ import UIKit
 
 class WriteOwnStoryViewController: UIViewController {
     
-    
     // MARK: - Variables
     
 
     // MARK: - Outlets
-    @IBOutlet weak var headerOwnStory: UILabel!
-    @IBOutlet weak var txtYourOwnStory: UITextView!
+   
     
+    @IBOutlet weak var tableView: UITableView!
     // MARK: - Actions
     
     @IBAction func actionBack(_ sender: Any) {
         dismiss(animated: true)
     }
     
-    @IBAction func btnSaveOwnStory(_ sender: Any) {
-        
-        dismiss(animated: true) {
-            if self.txtYourOwnStory.text != "" {
-                UserDefaults.standard.set(self.txtYourOwnStory.text, forKey: "currentStory")
-            }
-            botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])
-        }
-    }
-    
     // MARK: - Statements
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
 
-extension WriteOwnStoryViewController: UITextViewDelegate {
+extension WriteOwnStoryViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WriteYourOwnStoryCellID", for: indexPath) as! WriteYourOwnStoryCell
+
+        cell.pickerData = [categoryArray[indexPath.row]]
+        cell.pickerViewCategory.reloadAllComponents();
+        
+        return cell
+    }
     
     
     

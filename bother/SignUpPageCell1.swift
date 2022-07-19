@@ -33,6 +33,12 @@ class SignUpPageCell1: UITableViewCell {
     // MARK: - Statements
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        runAfterDelay(1) {
+            UILabel.animate(withDuration: 2) {
+                self.lblConvince.alpha = 1
+            }
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

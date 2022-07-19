@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import FirebaseAuth
 
 
 class DailyLimitAchievedTableViewCell: UITableViewCell {
@@ -23,6 +23,9 @@ class DailyLimitAchievedTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        if Auth.auth().currentUser != nil {
+            imageAchievedLmt.image = UIImage(systemName: "plus.message")
+        } 
         
     }
 

@@ -34,13 +34,15 @@ class SelectedCategoryViewController: UIViewController {
     @IBAction func btnResetDailyBother(_ sender: Any) {
         
         print("pressed")
-        
         DispatchQueue.main.async {
                 self.openWriteYourStoryPage()
         }
-            
+        if Auth.auth().currentUser == nil {
+            openSignUpViewController(selectedMainCategory: selectedMainCategory)
+        } else {
+            openWriteYourStoryPage()
+        }
         
-       
     }
     
     @IBAction func actionLogOut(_ sender: Any) {
@@ -62,11 +64,6 @@ class SelectedCategoryViewController: UIViewController {
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-
-        
-        
         
         botherArray.removeSubrange(2..<botherArray.count)
         if let savedBother = UserDefaults.standard.value(forKey: "currentStory") as? String {
@@ -125,25 +122,20 @@ extension SelectedCategoryViewController: UITableViewDelegate, ActionYesOrNoDele
     }
     
     func actionYesOrNoClicked(cell: SelectedCategoryTableViewCell) {
-        if Auth.auth().currentUser != nil {
-            if let indexPath = self.tableView.indexPath(for: cell){
-                if botherArray.count > 0 {
-                    botherArray.remove(at: indexPath.row - 1)
-                    if let dailyBotherLimit = BotherUser.shared.getDailyBotherLimit() {
-                        BotherUser.shared.setDailyBotherLimit(dailyBotherLimit: dailyBotherLimit - 1)
-                    }
-                } else {
-                    isDailyBotherFinished = true
+        if let indexPath = self.tableView.indexPath(for: cell){
+            if botherArray.count > 0 {
+                botherArray.remove(at: indexPath.row - 1)
+                if let dailyBotherLimit = BotherUser.shared.getSessionBotherLimit() {
+                    BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: dailyBotherLimit - 1)
                 }
-            }
-            self.tableView.reloadData()
-        } else {
-            DispatchQueue.main.async {
-                self.openSignInViewController(selectedMainCategory: self.selectedMainCategory)
+            } else {
+                isDailyBotherFinished = true
             }
         }
+        self.tableView.reloadData()
     }
 }
+
 
 extension SelectedCategoryViewController: UITableViewDataSource {
     
@@ -175,8 +167,11 @@ extension SelectedCategoryViewController: UITableViewDataSource {
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DailyLimitAchievedTableViewCellID", for: indexPath) as! DailyLimitAchievedTableViewCell
-            
-            cell.headerAchievedLmt.text = "Finished, share your own bother with 3 friends, get 10 more."
+            if Auth.auth().currentUser == nil {
+                cell.headerAchievedLmt.text = "Sign up and become limitless user."
+            } else {
+                cell.headerAchievedLmt.text = "Write your own, share, relieve..."
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedCategoryTableViewCellID", for: indexPath) as! SelectedCategoryTableViewCell

@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class BotherUser {
+    
     
     //MARK: - Variables
     private var appVersion : String?
@@ -21,15 +23,16 @@ class BotherUser {
     private var isVipMember : Bool?
     private var language : String?
     private var name : String?
+    private var totalBotherCount : Int?
     private var oneSignalId : String?
     private var sessionStarted : Int?
     private var surname : String?
     private var createdAt : Double?
     private var isSuspended : Bool?
-    
-    
-    private var dailyBotherLimit : Int?
+    private var isSawWriteStoryPage : Bool?
 
+    
+    private var sessionBotherLimit : Int = 10
 
     
     // deviceType => 0-iOS, 1-Android, -1 YOK
@@ -155,14 +158,34 @@ class BotherUser {
         self.createdAt = createdAt;
     }
     //----
-    func getDailyBotherLimit() -> Int?{
-        return dailyBotherLimit}
+    func getSessionBotherLimit() -> Int?{
+        return sessionBotherLimit}
     
-    func setDailyBotherLimit(dailyBotherLimit: Int?){
-        self.dailyBotherLimit = dailyBotherLimit;
+    func setSessionBotherLimit(sessionBotherLimit: Int){
+        self.sessionBotherLimit = sessionBotherLimit;
     }
+    //----
+    func getIsSawWriteStoryPage() -> Bool?{
+        return isSawWriteStoryPage}
+    
+    func setIsSawWriteStoryPage(isSawWriteStoryPage: Bool){
+        self.isSawWriteStoryPage = isSawWriteStoryPage;
+    }
+    //----
+    func getTotalBotherCount() -> Int?{
+        return totalBotherCount}
+    
+    func setTotalBotherCount(totalBotherCount: Int?){
+        self.totalBotherCount = totalBotherCount;
+    }
+ 
     
     
     
-    
+    func checkIsUserLogin() {
+        print("checkIsUserLoginWorked")
+        if Auth.auth().currentUser != nil {
+            setSessionBotherLimit(sessionBotherLimit: 30)
+        }
+    }
 }
