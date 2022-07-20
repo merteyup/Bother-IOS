@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MorePageViewController: UIViewController {
     
@@ -29,10 +30,49 @@ class MorePageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+     func logOut() {
+        if Auth.auth().currentUser != nil {
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                print("Signed Out")
+            } catch let signOutError as NSError {
+                print("Error signing out: %@", signOutError)
+            }
+        } else {
+            print("CurrentUser == Nil")
+        }
+    }
+    
+    func showAlertView() {
+        DispatchQueue.main.async {
+            // Create the alert controller
+                 let alertController = UIAlertController(title: "Are You Sure", message: "Do you want to log out?", preferredStyle: .alert)
+
+                 // Create the actions
+                let okAction = UIAlertAction(title: "Yes", style: .destructive) {
+                     UIAlertAction in
+                    self.logOut()
+                 }
+                let cancelAction = UIAlertAction(title: "No", style: .default) {
+                     UIAlertAction in
+
+                }
+
+                 // Add the actions
+                 alertController.addAction(okAction)
+                 alertController.addAction(cancelAction)
+
+                 // Present the controller
+                 self.present(alertController, animated: true, completion: nil)
+        }
+    
 
 }
 
-
+}
 extension MorePageViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -53,12 +93,18 @@ extension MorePageViewController : UITableViewDelegate {
             
         } else if indexPath.row == 6 {
             
+            openSelectLanguageViewController()
+            
         } else if indexPath.row == 7 {
+            
+            showAlertView()
             
         } else if indexPath.row == 8 {
             
+        }/* else if indexPath.row == 9 {
+          //  openBuyMeCoffeePage()
         }
-        
+        */
         
         
         
@@ -77,24 +123,26 @@ extension MorePageViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "morePageCellID", for: indexPath)
         
         if indexPath.row == 0 {
-            cell.textLabel?.text = "Sign Up"
+            cell.textLabel?.text = "main.Sign*Up".l10n()
         } else if indexPath.row == 1 {
-            cell.textLabel?.text = "Premium"
+            cell.textLabel?.text = "main.Premium".l10n()
         } else if indexPath.row == 2 {
-            cell.textLabel?.text = "How it Works?"
+            cell.textLabel?.text = "main.How*it*Works?".l10n()
         }  else if indexPath.row == 3 {
-            cell.textLabel?.text = "Notifications"
+            cell.textLabel?.text = "main.Notifications".l10n()
         } else if indexPath.row == 4 {
-            cell.textLabel?.text = "Terms of Usage"
+            cell.textLabel?.text = "main.Terms*of*Usage".l10n()
         } else if indexPath.row == 5 {
-            cell.textLabel?.text = "Help"
+            cell.textLabel?.text = "main.Help".l10n()
         } else if indexPath.row == 6 {
-            cell.textLabel?.text = "Comment"
+            cell.textLabel?.text = "main.Language".l10n()
         } else if indexPath.row == 7 {
-            cell.textLabel?.text = "Log Out"
+            cell.textLabel?.text = "main.Log*Out".l10n()
         } else if indexPath.row == 8 {
-            cell.textLabel?.text = "Delete Account"
-        }
+            cell.textLabel?.text = "main.Delete*Account".l10n()
+        } /* else if indexPath.row == 9 {
+            cell.textLabel?.text = "main.Buy*me*coffee".l10n()
+        } */
         return cell
     }
 }

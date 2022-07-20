@@ -8,6 +8,8 @@
 import UIKit
 
 
+// TODO: Back button should be fade in for users which will not sign in.
+
 
 class WriteOwnStoryViewController: UIViewController {
     
@@ -43,6 +45,7 @@ extension WriteOwnStoryViewController: UITableViewDelegate, UITableViewDataSourc
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "WriteYourOwnStoryCellID", for: indexPath) as! WriteYourOwnStoryCell
 
+        cell.writeYourOwnStoryCellDelegate = self
         cell.pickerData = [categoryArray[indexPath.row]]
         cell.pickerViewCategory.reloadAllComponents();
         
@@ -51,5 +54,15 @@ extension WriteOwnStoryViewController: UITableViewDelegate, UITableViewDataSourc
     
     
     
+    
+}
+
+
+extension WriteOwnStoryViewController: WriteYourOwnStoryCellDelegate {
+    
+    func sendPressed() {
+        print("Send Pressed 2")
+        self.dismiss(animated: true)
+    }
     
 }

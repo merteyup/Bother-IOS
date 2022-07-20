@@ -36,6 +36,9 @@
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="storyboard.Bother"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="theatermasks" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Wjp-qj-Tnk">
                                                     <rect key="frame" x="338" y="37" width="56" height="58"/>
@@ -45,7 +48,7 @@
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="msT-UK-9yA"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGm-t0-8K7">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGm-t0-8K7">
                                                     <rect key="frame" x="23" y="143" width="180" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="asa-vO-zSv"/>
@@ -54,6 +57,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="storyboard.Bother"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X28-er-SLr">
                                                     <rect key="frame" x="211" y="143" width="180" height="50"/>
@@ -143,7 +149,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="morePageCellID" textLabel="J7M-Ww-3Fh" rowHeight="232" style="IBUITableViewCellStyleDefault" id="fHg-rW-hi2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="morePageCellID" textLabel="J7M-Ww-3Fh" rowHeight="232" style="IBUITableViewCellStyleDefault" id="fHg-rW-hi2">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="232"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fHg-rW-hi2" id="XGV-Ld-cWN">
@@ -179,6 +185,92 @@
             </objects>
             <point key="canvasLocation" x="-73.913043478260875" y="445.98214285714283"/>
         </scene>
+        <!--Select Language View Controller-->
+        <scene sceneID="lM6-Xp-NMf">
+            <objects>
+                <viewController storyboardIdentifier="SelectLanguageViewControllerID" id="j3A-mX-wtU" customClass="SelectLanguageViewController" customModule="bother" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zGy-FH-PMi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nPd-sV-j8w">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SelectLanguageViewControllerCellID" textLabel="fkU-Um-6Gh" rowHeight="155" style="IBUITableViewCellStyleDefault" id="2mg-oB-Aka">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="155"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2mg-oB-Aka" id="vg3-Fo-AZi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fkU-Um-6Gh">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="155"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="j3A-mX-wtU" id="8DN-W3-f2Y"/>
+                                    <outlet property="delegate" destination="j3A-mX-wtU" id="ls4-gm-eBO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qez-ka-Sax"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nPd-sV-j8w" firstAttribute="leading" secondItem="Qez-ka-Sax" secondAttribute="leading" id="JJh-Pu-QZT"/>
+                            <constraint firstAttribute="bottom" secondItem="nPd-sV-j8w" secondAttribute="bottom" id="Otp-kT-hEA"/>
+                            <constraint firstItem="nPd-sV-j8w" firstAttribute="trailing" secondItem="Qez-ka-Sax" secondAttribute="trailing" id="RSr-mQ-q3C"/>
+                            <constraint firstItem="nPd-sV-j8w" firstAttribute="top" secondItem="zGy-FH-PMi" secondAttribute="top" id="Xbe-4Y-HG6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="nPd-sV-j8w" id="Abh-al-1Nz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w6h-eL-Uqg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75.362318840579718" y="1167.8571428571429"/>
+        </scene>
+        <!--Buy Me Coffee View Controller-->
+        <scene sceneID="KSp-jc-5VW">
+            <objects>
+                <viewController storyboardIdentifier="BuyMeCoffeeViewControllerID" id="7va-TS-n4z" customClass="BuyMeCoffeeViewController" customModule="bother" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YDe-H8-5ox">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vz2-Ix-W7g">
+                                <rect key="frame" x="173.5" y="432.5" width="67" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="YWW-tO-cVx"/>
+                                    <constraint firstAttribute="height" constant="31" id="dtM-m2-nD4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="btnBuyMeCoffee:" destination="7va-TS-n4z" eventType="touchUpInside" id="Zd0-dW-tPf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="H9Z-dA-Tci"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vz2-Ix-W7g" firstAttribute="centerY" secondItem="YDe-H8-5ox" secondAttribute="centerY" id="OvW-5p-Ihg"/>
+                            <constraint firstItem="vz2-Ix-W7g" firstAttribute="centerX" secondItem="YDe-H8-5ox" secondAttribute="centerX" id="nxP-pF-wnO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mI2-fY-Qw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="1176"/>
+        </scene>
         <!--Write Own Story View Controller-->
         <scene sceneID="oDs-li-sCs">
             <objects>
@@ -208,7 +300,7 @@
                                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="228" id="Evb-2g-uI1"/>
                                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="312" id="tBn-ek-nCz"/>
                                                             </constraints>
-                                                            <mutableString key="text"> Here you can write a things like:   Trying to keep track of my all passwords and usernames is killing me. That's more than bothering 😅  Or  My neighbor sometimes uses my trash can without even asking me 😠 I see her from my kitchen window. I know her own trash is mostly full and that's bothering me... 😔  Tap here, start writing ✍️</mutableString>
+                                                            <string key="text"> Here you can write a things like:   Trying to keep track of my all passwords and usernames is killing me. That's more than bothering 😅  Or  My neighbor sometimes uses my trash can without even asking me 😠 I see her from my kitchen window. I know her own trash is mostly full and that's bothering me... 😔  Tap here, start writing ✍️</string>
                                                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -251,7 +343,6 @@
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="actionSendYourStory:" destination="Sma-sb-XU6" eventType="touchUpInside" id="Ymo-xu-2Hm"/>
-                                                        <action selector="btnSaveOwnStory:" destination="X0c-5g-uLd" eventType="touchUpInside" id="I4N-be-zvn"/>
                                                     </connections>
                                                 </button>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4NO-Qe-Ilj">
@@ -840,25 +931,31 @@
                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYw-FV-oUQ">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYw-FV-oUQ">
                                                     <rect key="frame" x="244" y="96" width="150" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="IJ1-GK-yzn"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="cUB-3f-b8e"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="storyboard.Disagreed*by"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPc-QB-4Cr">
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPc-QB-4Cr">
                                                     <rect key="frame" x="20" y="96" width="150" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="OBP-sM-biR"/>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="VvN-oX-h5n"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="storyboard.Agreed*by"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWC-rz-Dps" customClass="ButtonBackground" customModule="bother" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="158" width="150" height="40"/>
@@ -869,9 +966,10 @@
                                                     </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="Me Too">
-                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    </buttonConfiguration>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="storyboard.Agreed"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="btnYesOrNoClickedWithSender:" destination="pnM-p8-noR" eventType="touchUpInside" id="c8n-QM-Jnt"/>
                                                     </connections>
@@ -885,9 +983,10 @@
                                                     </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" title="No">
-                                                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
-                                                    </buttonConfiguration>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="storyboard.Disagreed"/>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="btnYesOrNoClickedWithSender:" destination="pnM-p8-noR" eventType="touchUpInside" id="kJJ-Z9-sGI"/>
                                                     </connections>
@@ -943,7 +1042,7 @@
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XkH-RU-6fc">
-                                                    <rect key="frame" x="120" y="132" width="175" height="171.5"/>
+                                                    <rect key="frame" x="118" y="131" width="177" height="176"/>
                                                     <color key="tintColor" red="0.96470588239999999" green="0.62745098040000002" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="175.5" id="CHh-ZQ-QHQ"/>
@@ -997,34 +1096,17 @@
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Back">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
-                                        </buttonConfiguration>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="storyboard.Back"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="actionDismiss:" destination="39p-VI-WqR" eventType="touchUpInside" id="s9a-MB-FCD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8PW-aa-rid">
-                                        <rect key="frame" x="324.5" y="41" width="70.5" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="67" id="cLQ-zT-uKf"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="kzF-pG-qXu"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Log Out">
-                                            <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="actionLogOut:" destination="39p-VI-WqR" eventType="touchUpInside" id="3CX-N2-N83"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstItem="8PW-aa-rid" firstAttribute="top" secondItem="GhT-hC-Xwy" secondAttribute="top" constant="41" id="0UZ-4Y-nYJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="8PW-aa-rid" secondAttribute="trailing" constant="19" id="BH2-Qk-Y4e"/>
-                                    <constraint firstAttribute="bottom" secondItem="8PW-aa-rid" secondAttribute="bottom" constant="8" id="cGd-EM-Q0m"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="fPs-vM-5al"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="lIp-Xx-26F"/>
                                     <constraint firstItem="hjQ-Kq-xZF" firstAttribute="leading" secondItem="GhT-hC-Xwy" secondAttribute="leading" constant="20" symbolic="YES" id="r1N-8s-a4f"/>
@@ -1046,7 +1128,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btnLogOut" destination="8PW-aa-rid" id="n6h-RQ-ugE"/>
                         <outlet property="tableView" destination="txD-Ut-CLZ" id="Klt-mo-wzD"/>
                     </connections>
                 </viewController>

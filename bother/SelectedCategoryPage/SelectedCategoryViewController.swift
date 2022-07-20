@@ -14,6 +14,8 @@ class SelectedCategoryViewController: UIViewController {
     
     // TODO: Can be anything without violence, sex, terrorism, etc.
     // TODO: When create user, go to correct page with correct info.
+    // TODO: Here we can animate agreed and disagreed labels after selection, for better ui.
+    // TODO: Also this stands by with the reason, people will be effected other's answers.
     
     // MARK: - Variables
     var selectedMainCategory : Int = 0
@@ -44,31 +46,11 @@ class SelectedCategoryViewController: UIViewController {
         }
         
     }
-    
-    @IBAction func actionLogOut(_ sender: Any) {
-        if Auth.auth().currentUser != nil {
-            let firebaseAuth = Auth.auth()
-            do {
-                try firebaseAuth.signOut()
-                print("Signed Out")
-                dismiss(animated: true)
-            } catch let signOutError as NSError {
-                print("Error signing out: %@", signOutError)
-            }
-        } else {
-            print("CurrentUser == Nil")
-        }
-    }
-    
+ 
  
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        botherArray.removeSubrange(2..<botherArray.count)
-        if let savedBother = UserDefaults.standard.value(forKey: "currentStory") as? String {
-            botherArray.append(savedBother)
-        }
         
     }
     
@@ -76,21 +58,12 @@ class SelectedCategoryViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        checkAuthForBtnAlpha()
         NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
 
         
     }
     
     // MARK: - Functions
-    
-    fileprivate func checkAuthForBtnAlpha() {
-        if Auth.auth().currentUser != nil {
-            btnLogOut.alpha = 1
-        } else {
-            btnLogOut.alpha = 0
-        }
-    }
     
     @objc func showSuccessView(){
         DispatchQueue.main.async {
@@ -127,6 +100,7 @@ extension SelectedCategoryViewController: UITableViewDelegate, ActionYesOrNoDele
                 botherArray.remove(at: indexPath.row - 1)
                 if let dailyBotherLimit = BotherUser.shared.getSessionBotherLimit() {
                     BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: dailyBotherLimit - 1)
+                    
                 }
             } else {
                 isDailyBotherFinished = true

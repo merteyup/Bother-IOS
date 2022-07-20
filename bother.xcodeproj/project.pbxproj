@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BA1FBB1E5D294F2CD0F42D54 /* Pods_bother.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36C5B525F90288A9F3747A4 /* Pods_bother.framework */; };
+		C40290CE2888871100E3621F /* Localizable.json in Resources */ = {isa = PBXBuildFile; fileRef = C40290D02888871100E3621F /* Localizable.json */; };
 		C45CD59F2884B0B900760438 /* SignInPageCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD58C2884B0B500760438 /* SignInPageCell1.swift */; };
 		C45CD5A02884B0B900760438 /* MySubclassedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD58D2884B0B500760438 /* MySubclassedTabBarController.swift */; };
 		C45CD5A12884B0B900760438 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD58E2884B0B500760438 /* GlobalVariables.swift */; };
@@ -33,12 +34,17 @@
 		C4CD0B8C2884AD7000F4667F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CD0B8A2884AD7000F4667F /* Main.storyboard */; };
 		C4CD0B8E2884AD7100F4667F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CD0B8D2884AD7100F4667F /* Assets.xcassets */; };
 		C4CD0B912884AD7100F4667F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CD0B8F2884AD7100F4667F /* LaunchScreen.storyboard */; };
+		C4D767C22888AE7300E9E4BF /* BuyMeCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D767C12888AE7300E9E4BF /* BuyMeCoffeeViewController.swift */; };
 		C4DF5E02288734B800E50813 /* ViewBackgroundFWriteStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */; };
 		C4DF5E04288739DD00E50813 /* WriteYourOwnStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */; };
+		C4DF5E0628876BEA00E50813 /* SelectLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5E0528876BEA00E50813 /* SelectLanguageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32375DDEE9A2A38F77094328 /* Pods-bother.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bother.debug.xcconfig"; path = "Target Support Files/Pods-bother/Pods-bother.debug.xcconfig"; sourceTree = "<group>"; };
+		C40290CF2888871100E3621F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Localizable.json; sourceTree = "<group>"; };
+		C40290D12888871A00E3621F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Localizable.json; sourceTree = "<group>"; };
+		C40290D22888871D00E3621F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tr; path = tr.lproj/Localizable.json; sourceTree = "<group>"; };
 		C45CD58C2884B0B500760438 /* SignInPageCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInPageCell1.swift; sourceTree = "<group>"; };
 		C45CD58D2884B0B500760438 /* MySubclassedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySubclassedTabBarController.swift; sourceTree = "<group>"; };
 		C45CD58E2884B0B500760438 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 		C45CD59C2884B0B800760438 /* ExampleCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleCodes.swift; sourceTree = "<group>"; };
 		C45CD59D2884B0B900760438 /* SelectedCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		C45CD59E2884B0B900760438 /* SignUpPageCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPageCell1.swift; sourceTree = "<group>"; };
+		C4A79C1A288775D3002F6B59 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		C4A79C1B288775D3002F6B59 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C4AE9E462884AF3C0001F933 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4CD0B812884AD7000F4667F /* bother.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bother.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CD0B842884AD7000F4667F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +74,10 @@
 		C4CD0B8D2884AD7100F4667F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4CD0B902884AD7100F4667F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4CD0B922884AD7100F4667F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4D767C12888AE7300E9E4BF /* BuyMeCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyMeCoffeeViewController.swift; sourceTree = "<group>"; };
 		C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackgroundFWriteStory.swift; sourceTree = "<group>"; };
 		C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteYourOwnStoryCell.swift; sourceTree = "<group>"; };
+		C4DF5E0528876BEA00E50813 /* SelectLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewController.swift; sourceTree = "<group>"; };
 		DB1CF4A7707CF083F885D16F /* Pods-bother.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bother.release.xcconfig"; path = "Target Support Files/Pods-bother/Pods-bother.release.xcconfig"; sourceTree = "<group>"; };
 		E36C5B525F90288A9F3747A4 /* Pods_bother.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bother.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -101,6 +111,95 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C40290D328888E2C00E3621F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD5912884B0B600760438 /* BotherUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C40290D428888E4100E3621F /* CustomizeUI */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD5952884B0B700760438 /* ButtonBackground.swift */,
+				C45CD58F2884B0B600760438 /* SMButtonBackground.swift */,
+				C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */,
+			);
+			path = CustomizeUI;
+			sourceTree = "<group>";
+		};
+		C40290D528888E4E00E3621F /* CategoryPage */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD5932884B0B600760438 /* CategoryTableViewCell.swift */,
+				C45CD5922884B0B600760438 /* CategoryViewController.swift */,
+			);
+			path = CategoryPage;
+			sourceTree = "<group>";
+		};
+		C40290D628888E6300E3621F /* SelectedCategoryPage */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD5902884B0B600760438 /* DailyLimitAchievedTableViewCell.swift */,
+				C45CD59D2884B0B900760438 /* SelectedCategoryTableViewCell.swift */,
+				C45CD5962884B0B700760438 /* SelectedCategoryViewController.swift */,
+			);
+			path = SelectedCategoryPage;
+			sourceTree = "<group>";
+		};
+		C40290D728888E7200E3621F /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD5942884B0B700760438 /* GlobalFunctions.swift */,
+				C45CD58E2884B0B500760438 /* GlobalVariables.swift */,
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		C40290D828888E7A00E3621F /* MorePage */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD5992884B0B800760438 /* MorePageViewController.swift */,
+			);
+			path = MorePage;
+			sourceTree = "<group>";
+		};
+		C40290D928888E8C00E3621F /* SignInPage */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD58C2884B0B500760438 /* SignInPageCell1.swift */,
+				C45CD5972884B0B700760438 /* SignInViewController.swift */,
+			);
+			path = SignInPage;
+			sourceTree = "<group>";
+		};
+		C40290DA28888E9600E3621F /* SignUpPage */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD59E2884B0B900760438 /* SignUpPageCell1.swift */,
+				C45CD59A2884B0B800760438 /* SignUpViewController.swift */,
+			);
+			name = SignUpPage;
+			sourceTree = "<group>";
+		};
+		C40290DB28888EA900E3621F /* WriteYourOwnStoryPage */ = {
+			isa = PBXGroup;
+			children = (
+				C45CD59B2884B0B800760438 /* WriteOwnStoryViewController.swift */,
+				C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */,
+			);
+			path = WriteYourOwnStoryPage;
+			sourceTree = "<group>";
+		};
+		C40290DC28888EBA00E3621F /* LanguagePage */ = {
+			isa = PBXGroup;
+			children = (
+				C4DF5E0528876BEA00E50813 /* SelectLanguageViewController.swift */,
+			);
+			path = LanguagePage;
+			sourceTree = "<group>";
+		};
 		C4CD0B782884AD7000F4667F = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +221,7 @@
 		C4CD0B832884AD7000F4667F /* bother */ = {
 			isa = PBXGroup;
 			children = (
+				C4DF5E0728876E4A00E50813 /* Localizable */,
 				C4CD0B842884AD7000F4667F /* AppDelegate.swift */,
 				C4CD0B862884AD7000F4667F /* SceneDelegate.swift */,
 				C4CD0B882884AD7000F4667F /* ViewController.swift */,
@@ -130,28 +230,37 @@
 				C4CD0B8F2884AD7100F4667F /* LaunchScreen.storyboard */,
 				C4CD0B922884AD7100F4667F /* Info.plist */,
 				C4AE9E462884AF3C0001F933 /* GoogleService-Info.plist */,
-				C45CD5912884B0B600760438 /* BotherUser.swift */,
-				C45CD5952884B0B700760438 /* ButtonBackground.swift */,
-				C45CD5932884B0B600760438 /* CategoryTableViewCell.swift */,
-				C45CD5922884B0B600760438 /* CategoryViewController.swift */,
-				C45CD5902884B0B600760438 /* DailyLimitAchievedTableViewCell.swift */,
+				C40290D728888E7200E3621F /* Globals */,
+				C40290D428888E4100E3621F /* CustomizeUI */,
+				C40290D528888E4E00E3621F /* CategoryPage */,
+				C40290D628888E6300E3621F /* SelectedCategoryPage */,
 				C45CD59C2884B0B800760438 /* ExampleCodes.swift */,
-				C45CD5942884B0B700760438 /* GlobalFunctions.swift */,
-				C45CD58E2884B0B500760438 /* GlobalVariables.swift */,
-				C45CD5992884B0B800760438 /* MorePageViewController.swift */,
+				C40290D828888E7A00E3621F /* MorePage */,
 				C45CD58D2884B0B500760438 /* MySubclassedTabBarController.swift */,
-				C45CD59D2884B0B900760438 /* SelectedCategoryTableViewCell.swift */,
-				C45CD5962884B0B700760438 /* SelectedCategoryViewController.swift */,
-				C45CD58C2884B0B500760438 /* SignInPageCell1.swift */,
-				C45CD5972884B0B700760438 /* SignInViewController.swift */,
-				C45CD59E2884B0B900760438 /* SignUpPageCell1.swift */,
-				C45CD59A2884B0B800760438 /* SignUpViewController.swift */,
-				C45CD58F2884B0B600760438 /* SMButtonBackground.swift */,
-				C45CD59B2884B0B800760438 /* WriteOwnStoryViewController.swift */,
-				C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */,
-				C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */,
+				C40290D928888E8C00E3621F /* SignInPage */,
+				C40290DA28888E9600E3621F /* SignUpPage */,
+				C40290DB28888EA900E3621F /* WriteYourOwnStoryPage */,
+				C40290DC28888EBA00E3621F /* LanguagePage */,
+				C40290D328888E2C00E3621F /* Models */,
+				C4D767C32888AE7B00E9E4BF /* BuyMeCoffeePage */,
 			);
 			path = bother;
+			sourceTree = "<group>";
+		};
+		C4D767C32888AE7B00E9E4BF /* BuyMeCoffeePage */ = {
+			isa = PBXGroup;
+			children = (
+				C4D767C12888AE7300E9E4BF /* BuyMeCoffeeViewController.swift */,
+			);
+			path = BuyMeCoffeePage;
+			sourceTree = "<group>";
+		};
+		C4DF5E0728876E4A00E50813 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				C40290D02888871100E3621F /* Localizable.json */,
+			);
+			path = Localizable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +307,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = C4CD0B782884AD7000F4667F;
 			productRefGroup = C4CD0B822884AD7000F4667F /* Products */;
@@ -215,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4CD0B912884AD7100F4667F /* LaunchScreen.storyboard in Resources */,
+				C40290CE2888871100E3621F /* Localizable.json in Resources */,
 				C4AE9E472884AF3C0001F933 /* GoogleService-Info.plist in Resources */,
 				C4CD0B8E2884AD7100F4667F /* Assets.xcassets in Resources */,
 				C4CD0B8C2884AD7000F4667F /* Main.storyboard in Resources */,
@@ -270,12 +381,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DF5E0628876BEA00E50813 /* SelectLanguageViewController.swift in Sources */,
 				C45CD5A52884B0B900760438 /* CategoryViewController.swift in Sources */,
 				C4DF5E02288734B800E50813 /* ViewBackgroundFWriteStory.swift in Sources */,
 				C45CD5AE2884B0B900760438 /* WriteOwnStoryViewController.swift in Sources */,
 				C45CD5B12884B0B900760438 /* SignUpPageCell1.swift in Sources */,
 				C45CD5A12884B0B900760438 /* GlobalVariables.swift in Sources */,
 				C45CD5A72884B0B900760438 /* GlobalFunctions.swift in Sources */,
+				C4D767C22888AE7300E9E4BF /* BuyMeCoffeeViewController.swift in Sources */,
 				C4CD0B892884AD7000F4667F /* ViewController.swift in Sources */,
 				C45CD5A02884B0B900760438 /* MySubclassedTabBarController.swift in Sources */,
 				C45CD5B02884B0B900760438 /* SelectedCategoryTableViewCell.swift in Sources */,
@@ -299,10 +412,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C40290D02888871100E3621F /* Localizable.json */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C40290CF2888871100E3621F /* Base */,
+				C40290D12888871A00E3621F /* en */,
+				C40290D22888871D00E3621F /* tr */,
+			);
+			name = Localizable.json;
+			sourceTree = "<group>";
+		};
 		C4CD0B8A2884AD7000F4667F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C4CD0B8B2884AD7000F4667F /* Base */,
+				C4A79C1A288775D3002F6B59 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -311,6 +435,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C4CD0B902884AD7100F4667F /* Base */,
+				C4A79C1B288775D3002F6B59 /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -322,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -382,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

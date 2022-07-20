@@ -7,6 +7,13 @@
 
 import UIKit
 
+
+protocol WriteYourOwnStoryCellDelegate : AnyObject {
+    
+    func sendPressed()
+    
+}
+
 class WriteYourOwnStoryCell: UITableViewCell, UITextViewDelegate{
    
     
@@ -15,9 +22,10 @@ class WriteYourOwnStoryCell: UITableViewCell, UITextViewDelegate{
     @IBOutlet weak var txtBackgroundView: ViewBackgroundFWriteStory!
     @IBOutlet weak var pickerViewCategory: UIPickerView!
     
+    
     @IBOutlet weak var btnSend: ButtonBackground!
     var pickerData: Array<String>!
-
+    weak var writeYourOwnStoryCellDelegate : WriteYourOwnStoryCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,11 +70,11 @@ class WriteYourOwnStoryCell: UITableViewCell, UITextViewDelegate{
     @IBAction func actionSendYourStory(_ sender: Any) {
         
         print("Send pressed")
+        writeYourOwnStoryCellDelegate.sendPressed()
         if self.txtYourOwnStory.text != "" {
             UserDefaults.standard.set(self.txtYourOwnStory.text, forKey: "currentStory")
         }
         botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])
-        
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {

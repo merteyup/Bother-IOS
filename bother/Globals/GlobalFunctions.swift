@@ -82,6 +82,28 @@ extension UIViewController {
         self.present(vc, animated: true, completion: nil);
     }
     
+    func openSelectLanguageViewController() {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc: SelectLanguageViewController = storyboard.instantiateViewController(withIdentifier: "SelectLanguageViewControllerID") as! SelectLanguageViewController;
+        
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        vc.modalPresentationStyle = .overFullScreen;
+        
+        self.present(vc, animated: true, completion: nil);
+    }
+    
+    
+    func openBuyMeCoffeePage() {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc: BuyMeCoffeeViewController = storyboard.instantiateViewController(withIdentifier: "BuyMeCoffeeViewControllerID") as! BuyMeCoffeeViewController;
+        
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        vc.modalPresentationStyle = .overFullScreen;
+        
+        self.present(vc, animated: true, completion: nil);
+    }
     
     
 }

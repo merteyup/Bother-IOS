@@ -1,0 +1,141 @@
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "2l9-bV-efx"; */
+"2l9-bV-efx.text" = "Sign In";
+
+/* Class = "UITabBarItem"; title = "Item 1"; ObjectID = "3tI-RP-v5X"; */
+"3tI-RP-v5X.title" = "Item 1";
+
+/* Class = "UIButton"; configuration.title = "Forgot?"; ObjectID = "4fe-iD-4Ff"; */
+"4fe-iD-4Ff.configuration.title" = "Forgot?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4fe-iD-4Ff"; */
+"4fe-iD-4Ff.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Send"; ObjectID = "7Mc-CJ-qqM"; */
+"7Mc-CJ-qqM.configuration.title" = "Send";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7Mc-CJ-qqM"; */
+"7Mc-CJ-qqM.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Enter password"; ObjectID = "7tS-on-lJV"; */
+"7tS-on-lJV.placeholder" = "Enter password";
+
+/* Class = "UIButton"; configuration.title = "Log Out"; ObjectID = "8PW-aa-rid"; */
+"8PW-aa-rid.configuration.title" = "Log Out";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "8PW-aa-rid"; */
+"8PW-aa-rid.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Done"; ObjectID = "Bvf-om-caL"; */
+"Bvf-om-caL.configuration.title" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Bvf-om-caL"; */
+"Bvf-om-caL.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "New at Bother?"; ObjectID = "CKf-qf-OTt"; */
+"CKf-qf-OTt.text" = "New at Bother?";
+
+/* Class = "UIButton"; configuration.title = "Back"; ObjectID = "DH9-R2-T6L"; */
+"DH9-R2-T6L.configuration.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DH9-R2-T6L"; */
+"DH9-R2-T6L.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Enter your e-mail address"; ObjectID = "HiC-Jn-E9j"; */
+"HiC-Jn-E9j.placeholder" = "Enter your e-mail address";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "J7M-Ww-3Fh"; */
+"J7M-Ww-3Fh.text" = "Title";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KGm-t0-8K7"; */
+"KGm-t0-8K7.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KqY-3g-z5Q"; */
+"KqY-3g-z5Q.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "LAB-3E-spg"; */
+"LAB-3E-spg.title" = "Item";
+
+/* Class = "UIButton"; configuration.title = "Back"; ObjectID = "T0R-kh-Vtg"; */
+"T0R-kh-Vtg.configuration.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "T0R-kh-Vtg"; */
+"T0R-kh-Vtg.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Done"; ObjectID = "WIM-Q4-WAg"; */
+"WIM-Q4-WAg.configuration.title" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WIM-Q4-WAg"; */
+"WIM-Q4-WAg.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Here you are!   It's a good opportunity to tell about the little things (In 200 Characthers 🧐) that bother you.   Give it a go."; ObjectID = "WQ0-7l-sAg"; */
+"WQ0-7l-sAg.text" = "Here you are!   It's a good opportunity to tell about the little things (In 200 Characthers 🧐) that bother you.   Give it a go.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "X28-er-SLr"; */
+"X28-er-SLr.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "YcX-bv-AEa"; */
+"YcX-bv-AEa.text" = "Label";
+
+/* Class = "UITextView"; text = " Here you can write a things like:   Trying to keep track of my all passwords and usernames is killing me. That's more than bothering 😅  Or  My neighbor sometimes uses my trash can without even asking me 😠 I see her from my kitchen window. I know her own trash is mostly full and that's bothering me... 😔  Tap here, start writing ✍️"; ObjectID = "cKW-tR-Kjb"; */
+"cKW-tR-Kjb.text" = " Here you can write a things like:   Trying to keep track of my all passwords and usernames is killing me. That's more than bothering 😅  Or  My neighbor sometimes uses my trash can without even asking me 😠 I see her from my kitchen window. I know her own trash is mostly full and that's bothering me... 😔  Tap here, start writing ✍️";
+
+/* Class = "UILabel"; text = "Sign Up"; ObjectID = "cc4-lY-YPU"; */
+"cc4-lY-YPU.text" = "Sign Up";
+
+/* Class = "UITextField"; placeholder = "Enter your e-mail address"; ObjectID = "euJ-pg-VgJ"; */
+"euJ-pg-VgJ.placeholder" = "Enter your e-mail address";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "fkU-Um-6Gh"; */
+"fkU-Um-6Gh.text" = "Title";
+
+/* Class = "UIButton"; configuration.title = "No"; ObjectID = "gOz-SR-Y2W"; */
+"gOz-SR-Y2W.configuration.title" = "No";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "gOz-SR-Y2W"; */
+"gOz-SR-Y2W.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gfw-S9-0uK"; */
+"gfw-S9-0uK.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Back"; ObjectID = "hjQ-Kq-xZF"; */
+"hjQ-Kq-xZF.configuration.title" = "Back";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hjQ-Kq-xZF"; */
+"hjQ-Kq-xZF.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iPc-QB-4Cr"; */
+"iPc-QB-4Cr.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "iYR-yt-Uhn"; */
+"iYR-yt-Uhn.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iYR-yt-Uhn"; */
+"iYR-yt-Uhn.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Me Too"; ObjectID = "oWC-rz-Dps"; */
+"oWC-rz-Dps.configuration.title" = "Me Too";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oWC-rz-Dps"; */
+"oWC-rz-Dps.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Feel free. It's your time to complain. "; ObjectID = "pvd-5J-LJg"; */
+"pvd-5J-LJg.text" = "Feel free. It's your time to complain. ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "rYw-FV-oUQ"; */
+"rYw-FV-oUQ.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Enter password"; ObjectID = "unN-oM-xka"; */
+"unN-oM-xka.placeholder" = "Enter password";
+
+/* Class = "UIButton"; configuration.title = "Register"; ObjectID = "x4z-Vh-oCm"; */
+"x4z-Vh-oCm.configuration.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "x4z-Vh-oCm"; */
+"x4z-Vh-oCm.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Done"; ObjectID = "zG9-hO-2Qp"; */
+"zG9-hO-2Qp.configuration.title" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zG9-hO-2Qp"; */
+"zG9-hO-2Qp.normalTitle" = "Button";
