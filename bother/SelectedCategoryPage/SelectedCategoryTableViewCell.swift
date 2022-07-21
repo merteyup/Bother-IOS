@@ -19,10 +19,12 @@ class SelectedCategoryTableViewCell: UITableViewCell {
     // MARK: - Variables
     weak var actionYesOrNoDelegate: ActionYesOrNoDelegate?
     
+    @IBOutlet weak var foregroundGrey: UIView!
+    
     // MARK: - Outlets
     @IBOutlet weak var selectedCategoryTitle: UILabel!
-    @IBOutlet weak var selectedcategoryBotherCount: UILabel!
-    @IBOutlet weak var selectedcategoryReaderCount: UILabel!
+    @IBOutlet weak var selectedcategoryBotherAgreed: UILabel!
+    @IBOutlet weak var selectedcategoryReaderDisagreed: UILabel!
     @IBOutlet weak var btnMeToo: UIButton!
     @IBOutlet weak var btnNo: UIButton!
         
@@ -47,23 +49,28 @@ class SelectedCategoryTableViewCell: UITableViewCell {
     func updateCell(botherObject: Bother) {
         
         selectedCategoryTitle.text = botherObject.botherText
-        if botherObject.botherAnswer != nil {
-            if self.selectedcategoryBotherCount.alpha == 0 {
-                UILabel.animate(withDuration: 0.5) {
-                        self.selectedcategoryBotherCount.alpha = 1
-                    }
-                selectedcategoryBotherCount.text = String(botherObject.botherAnswer!)
-            }
+        if let botherAnswer = botherObject.botherAnswer {
+            
+            // TODO: Get values for selected bother from database and show them in here correctly.
+            self.selectedcategoryBotherAgreed.alpha = 1
+            selectedcategoryBotherAgreed.text = String(botherObject.botherAnswer!)
+            self.selectedcategoryReaderDisagreed.alpha = 1
+            selectedcategoryReaderDisagreed.text = String(botherObject.botherAnswer!)
+            self.isUserInteractionEnabled = false
+            foregroundGrey.alpha = 1
+
         }
         
     }
     
     
     override func prepareForReuse() {
-        selectedcategoryBotherCount.alpha = 0
-        selectedcategoryBotherCount.text = ""
-    }
+        selectedcategoryBotherAgreed.alpha = 0
+        selectedcategoryBotherAgreed.text = ""
+        selectedcategoryReaderDisagreed.alpha = 0
+        selectedcategoryReaderDisagreed.text = ""
+        self.isUserInteractionEnabled = true
+        foregroundGrey.alpha = 0
 
-    
-    
+    }
 }

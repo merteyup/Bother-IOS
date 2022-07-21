@@ -991,14 +991,21 @@
                                                         <action selector="btnYesOrNoClickedWithSender:" destination="pnM-p8-noR" eventType="touchUpInside" id="kJJ-Z9-sGI"/>
                                                     </connections>
                                                 </button>
+                                                <view userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QbS-7M-W8d">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="209"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="0.49560223509933776" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="gOz-SR-Y2W" firstAttribute="leading" secondItem="oWC-rz-Dps" secondAttribute="trailing" priority="999" constant="74" id="07Y-ed-cnU"/>
                                                 <constraint firstItem="rYw-FV-oUQ" firstAttribute="trailing" secondItem="Eyo-rY-B4r" secondAttribute="trailingMargin" id="10E-WY-Ulg"/>
                                                 <constraint firstItem="gOz-SR-Y2W" firstAttribute="top" secondItem="rYw-FV-oUQ" secondAttribute="bottom" constant="22" id="6V6-6V-TBz"/>
+                                                <constraint firstAttribute="bottom" secondItem="QbS-7M-W8d" secondAttribute="bottom" id="8xs-Ce-yxc"/>
                                                 <constraint firstItem="KqY-3g-z5Q" firstAttribute="leading" secondItem="Eyo-rY-B4r" secondAttribute="leadingMargin" id="DTg-23-hJE"/>
                                                 <constraint firstItem="gOz-SR-Y2W" firstAttribute="trailing" secondItem="Eyo-rY-B4r" secondAttribute="trailingMargin" id="GsI-nI-JSM"/>
                                                 <constraint firstItem="oWC-rz-Dps" firstAttribute="top" secondItem="iPc-QB-4Cr" secondAttribute="bottom" constant="22" id="Ig6-pO-lX6"/>
+                                                <constraint firstAttribute="trailing" secondItem="QbS-7M-W8d" secondAttribute="trailing" id="Iyi-my-Hh2"/>
+                                                <constraint firstItem="QbS-7M-W8d" firstAttribute="leading" secondItem="Eyo-rY-B4r" secondAttribute="leading" id="KcB-Z2-S46"/>
                                                 <constraint firstItem="rYw-FV-oUQ" firstAttribute="top" secondItem="KqY-3g-z5Q" secondAttribute="bottom" constant="8" symbolic="YES" id="LTy-o7-El0"/>
                                                 <constraint firstItem="rYw-FV-oUQ" firstAttribute="leading" secondItem="iPc-QB-4Cr" secondAttribute="trailing" constant="74" id="MBe-GR-RSt"/>
                                                 <constraint firstItem="iPc-QB-4Cr" firstAttribute="top" secondItem="KqY-3g-z5Q" secondAttribute="bottom" constant="8" symbolic="YES" id="MD3-KL-UFa"/>
@@ -1006,6 +1013,7 @@
                                                 <constraint firstItem="oWC-rz-Dps" firstAttribute="leading" secondItem="Eyo-rY-B4r" secondAttribute="leadingMargin" id="agO-zT-ay8"/>
                                                 <constraint firstItem="KqY-3g-z5Q" firstAttribute="top" secondItem="Eyo-rY-B4r" secondAttribute="topMargin" id="dTr-pB-TZl"/>
                                                 <constraint firstItem="oWC-rz-Dps" firstAttribute="bottom" secondItem="Eyo-rY-B4r" secondAttribute="bottomMargin" id="nsQ-kk-DM6"/>
+                                                <constraint firstItem="QbS-7M-W8d" firstAttribute="top" secondItem="Eyo-rY-B4r" secondAttribute="top" id="rqg-XE-wZj"/>
                                                 <constraint firstItem="KqY-3g-z5Q" firstAttribute="trailing" secondItem="Eyo-rY-B4r" secondAttribute="trailingMargin" id="vqo-zC-TBR"/>
                                                 <constraint firstItem="iPc-QB-4Cr" firstAttribute="leading" secondItem="Eyo-rY-B4r" secondAttribute="leadingMargin" id="xuF-2L-KNg"/>
                                             </constraints>
@@ -1013,9 +1021,10 @@
                                         <connections>
                                             <outlet property="btnMeToo" destination="oWC-rz-Dps" id="p39-HZ-Y5a"/>
                                             <outlet property="btnNo" destination="gOz-SR-Y2W" id="QbG-gv-kK8"/>
+                                            <outlet property="foregroundGrey" destination="QbS-7M-W8d" id="B7o-rS-95b"/>
                                             <outlet property="selectedCategoryTitle" destination="KqY-3g-z5Q" id="uNe-Vu-vtO"/>
-                                            <outlet property="selectedcategoryBotherCount" destination="iPc-QB-4Cr" id="NgT-7I-icC"/>
-                                            <outlet property="selectedcategoryReaderCount" destination="rYw-FV-oUQ" id="BHE-a9-Pd3"/>
+                                            <outlet property="selectedcategoryBotherAgreed" destination="iPc-QB-4Cr" id="NgT-7I-icC"/>
+                                            <outlet property="selectedcategoryReaderDisagreed" destination="rYw-FV-oUQ" id="BHE-a9-Pd3"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DailyLimitAchievedTableViewCellID" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DailyLimitAchievedTableViewCellID" rowHeight="488" id="zsg-gn-enl" customClass="DailyLimitAchievedTableViewCell" customModule="bother" customModuleProvider="target">
