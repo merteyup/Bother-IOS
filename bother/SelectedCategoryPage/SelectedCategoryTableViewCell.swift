@@ -44,7 +44,25 @@ class SelectedCategoryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    func updateCell(botherObject: Bother) {
+        
+        selectedCategoryTitle.text = botherObject.botherText
+        if botherObject.botherAnswer != nil {
+            if self.selectedcategoryBotherCount.alpha == 0 {
+                UILabel.animate(withDuration: 0.5) {
+                        self.selectedcategoryBotherCount.alpha = 1
+                    }
+                selectedcategoryBotherCount.text = String(botherObject.botherAnswer!)
+            }
+        }
+        
+    }
     
+    
+    override func prepareForReuse() {
+        selectedcategoryBotherCount.alpha = 0
+        selectedcategoryBotherCount.text = ""
+    }
 
     
     

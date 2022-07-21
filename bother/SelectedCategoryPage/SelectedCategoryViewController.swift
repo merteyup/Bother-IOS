@@ -20,13 +20,13 @@ class SelectedCategoryViewController: UIViewController {
     // MARK: - Variables
     var selectedMainCategory : Int = 0
     var isDailyBotherFinished = false
+    var botherObjectArray = [Bother]()
+    var answeredBothersArray = [Bother]()
     
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var btnLogOut: UIButton!
-    
+        
     // MARK: - Actions
     @IBAction func actionDismiss(_ sender: Any) {
         dismiss(animated: true)
@@ -35,7 +35,6 @@ class SelectedCategoryViewController: UIViewController {
     
     @IBAction func btnResetDailyBother(_ sender: Any) {
         
-        print("pressed")
         DispatchQueue.main.async {
                 self.openWriteYourStoryPage()
         }
@@ -59,11 +58,24 @@ class SelectedCategoryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
-
         
+        getBothersFromDB()
     }
     
     // MARK: - Functions
+    
+    
+    func getBothersFromDB() {
+        
+        for index in botherArray {
+            let newBother = Bother(botherText: index, botherAnswer: nil)
+            botherObjectArray.append(newBother)
+            print("BotherOBjArr: \(botherObjectArray)")
+            
+        }
+        self.tableView.reloadData()
+        
+    }
     
     @objc func showSuccessView(){
         DispatchQueue.main.async {
@@ -91,22 +103,20 @@ class SelectedCategoryViewController: UIViewController {
 extension SelectedCategoryViewController: UITableViewDelegate, ActionYesOrNoDelegate {
     
     func actionYesOrNoClicked(answer: Int) {
-        print("SelectedAnswer: \(answer)")
+
     }
     
     func actionYesOrNoClicked(cell: SelectedCategoryTableViewCell) {
         if let indexPath = self.tableView.indexPath(for: cell){
             if botherArray.count > 0 {
-                botherArray.remove(at: indexPath.row - 1)
+              //  botherArray.remove(at: indexPath.row - 1)
                 if let dailyBotherLimit = BotherUser.shared.getSessionBotherLimit() {
                     BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: dailyBotherLimit - 1)
-                    
                 }
             } else {
                 isDailyBotherFinished = true
             }
         }
-        self.tableView.reloadData()
     }
 }
 
@@ -115,7 +125,6 @@ extension SelectedCategoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if botherArray.count > 0 {
-            
             return botherArray.count + 1
         } else {
             return 1
@@ -150,9 +159,38 @@ extension SelectedCategoryViewController: UITableViewDataSource {
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SelectedCategoryTableViewCellID", for: indexPath) as! SelectedCategoryTableViewCell
             cell.actionYesOrNoDelegate = self
-            cell.selectedCategoryTitle.text = botherArray[indexPath.row - 1]
+
+            prepareButtonCall(cell, indexPath)
+            cell.updateCell(botherObject: botherObjectArray[indexPath.row - 1])
+
             return cell
         }
+    }
+    
+    @objc func btnNoHandler(sender:UIButton) {
+        
+        let selectedIndexpath = sender.tag
+            botherObjectArray[selectedIndexpath - 1].botherAnswer = false
+            answeredBothersArray.append(botherObjectArray[selectedIndexpath - 1])
+            self.tableView.reloadData()
+        // TODO: Write new array to the database
+        print("AnsweredBothersArray: \(answeredBothersArray)")
+        }
+    
+    @objc func btnMeTooHandler(sender:UIButton) {
+            let selectedIndexpath = sender.tag
+            botherObjectArray[selectedIndexpath - 1].botherAnswer = true
+            answeredBothersArray.append(botherObjectArray[selectedIndexpath - 1])
+            self.tableView.reloadData()
+        print("AnsweredBothersArray: \(answeredBothersArray)")
+        // TODO: Write new array to the database
+        }
+    
+    fileprivate func prepareButtonCall(_ cell: SelectedCategoryTableViewCell, _ indexPath: IndexPath) {
+        cell.btnNo.tag = indexPath.row
+        cell.btnNo.addTarget(self,action:#selector(btnNoHandler(sender:)), for: .touchUpInside)
+        cell.btnMeToo.tag = indexPath.row
+        cell.btnMeToo.addTarget(self,action:#selector(btnMeTooHandler(sender:)), for: .touchUpInside)
     }
     
 }
