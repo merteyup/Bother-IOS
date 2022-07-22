@@ -35,13 +35,16 @@ class SelectedCategoryViewController: UIViewController {
     
     @IBAction func btnResetDailyBother(_ sender: Any) {
         
+        
+        
+        
         DispatchQueue.main.async {
-                self.openWriteYourStoryPage()
+            self.openWriteYourStoryPage(viewController: self)
         }
         if Auth.auth().currentUser == nil {
             openSignUpViewController(selectedMainCategory: selectedMainCategory)
         } else {
-            openWriteYourStoryPage()
+            openWriteYourStoryPage(viewController: self)
         }
         
     }
@@ -50,14 +53,14 @@ class SelectedCategoryViewController: UIViewController {
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
     }
     
   
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
+       
         
         getBothersFromDB()
     }
@@ -67,11 +70,12 @@ class SelectedCategoryViewController: UIViewController {
     
     func getBothersFromDB() {
         
+        botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])
+        botherObjectArray.removeAll()
         for index in botherArray {
             let newBother = Bother(botherText: index, botherAnswer: nil)
             botherObjectArray.append(newBother)
             print("BotherOBjArr: \(botherObjectArray)")
-            
         }
         self.tableView.reloadData()
         
@@ -81,12 +85,14 @@ class SelectedCategoryViewController: UIViewController {
         DispatchQueue.main.async {
             let alert = FCAlertView()
             let homeImage = UIImage(systemName: "house", withConfiguration: nil)
+            
+            // TODO: Here's working fine. Rounded corners need. Also button done click should take the user previous view controller. Maybe just dismiss can work.
             DispatchQueue.main.async {
                 alert.showAlert(inView: self,
                                 withTitle: "Done",
-                                withSubtitle: "Spend some time. You'll see there's a lot of people around you, bothered with something.",
+                                withSubtitle: "main.Spend*some*time*here".l10n(),
                                 withCustomImage: homeImage,
-                                withDoneButtonTitle: "Done",
+                                withDoneButtonTitle: "main.Done".l10n(),
                                 andButtons: ["Done"]) // Set your button titles here
                 alert.dismissOnOutsideTouch = true
                 alert.colorScheme = .red // Replace "Blue" with your preferred color from the image above
@@ -124,7 +130,7 @@ extension SelectedCategoryViewController: UITableViewDelegate, ActionYesOrNoDele
 extension SelectedCategoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if botherArray.count > 0 {
+        if BotherUser.shared.getSessionBotherLimit() != 0 {
             return botherArray.count + 1
         } else {
             return 1
@@ -135,8 +141,11 @@ extension SelectedCategoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
-            if botherArray.count != 0 {
+            
+            if BotherUser.shared.getSessionBotherLimit() != 0 {
+                
                 return 0
+
             } else {
                 return UITableView.automaticDimension
             }
@@ -162,7 +171,7 @@ extension SelectedCategoryViewController: UITableViewDataSource {
 
             prepareButtonCall(cell, indexPath)
             cell.updateCell(botherObject: botherObjectArray[indexPath.row - 1])
-
+            
             return cell
         }
     }
@@ -195,3 +204,12 @@ extension SelectedCategoryViewController: UITableViewDataSource {
     
 }
 
+
+extension SelectedCategoryViewController: WriteOwnStoryViewControllerDelegate {
+    
+    func newStorySendPressed() {
+        DispatchQueue.main.async {
+            self.getBothersFromDB()
+        }
+    }
+}

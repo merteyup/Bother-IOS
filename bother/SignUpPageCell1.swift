@@ -10,6 +10,7 @@ import UIKit
 
 protocol SignUpPageCell1Delegate: AnyObject {
     func signUpClicked()
+    func alreadyMemberClicked()
 }
 
 
@@ -48,6 +49,13 @@ class SignUpPageCell1: UITableViewCell {
     // MARK: - Actions
     @IBAction func btnSignUpClicked(_ sender: Any) {
         signUpPageCell1Delegate?.signUpClicked()
+    }
+    
+    
+    
+    @IBAction func btnAlreadyMember(_ sender: Any) {
+        signUpPageCell1Delegate?.alreadyMemberClicked()
+
     }
     
 }

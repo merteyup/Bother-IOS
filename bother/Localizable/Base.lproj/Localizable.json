@@ -21,7 +21,8 @@
                 "Language" : "Language",
                 "Log*Out" : "Log Out",
                 "Delete*Account" : "Delete Account",
-                "Buy*me*coffee" : "Buy*me*coffee"
+                "Buy*me*coffee" : "Buy*me*coffee",
+                "Spend*some*time*here" : "Spend some time here. You'll see there's a lot of people around you, bothered with something."
 
                 
                 
@@ -40,7 +41,8 @@
                 "Agreed*by" : "Agreed by: ",
                 "Disagreed*by" : "Disagreed by: ",
                 "people" : "people",
-                "Bother" : "Bother: "
+                "Bother" : "Bother: ",
+                "Already*a*member" : "Already a member? Sign In."
 
 
     }

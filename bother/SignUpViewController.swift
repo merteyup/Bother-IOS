@@ -102,6 +102,12 @@ extension SignUpViewController : UITableViewDataSource {
 }
 
 extension SignUpViewController: SignUpPageCell1Delegate {
+    func alreadyMemberClicked() {
+        DispatchQueue.main.async {
+            self.openSignInViewController(selectedMainCategory: self.selectedMainCategory)
+        }
+    }
+    
     
     func signUpClicked() {
         // TODO: Move this into selectedCategoryHelper.signUp()

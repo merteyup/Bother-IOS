@@ -10,10 +10,15 @@ import UIKit
 
 // TODO: Back button should be fade in for users which will not sign in.
 
+protocol WriteOwnStoryViewControllerDelegate : AnyObject {
+    func newStorySendPressed()
+}
+
 
 class WriteOwnStoryViewController: UIViewController {
     
     // MARK: - Variables
+    weak var writeOwnStoryViewControllerDelegate : WriteOwnStoryViewControllerDelegate?
     
 
     // MARK: - Outlets
@@ -61,8 +66,12 @@ extension WriteOwnStoryViewController: UITableViewDelegate, UITableViewDataSourc
 extension WriteOwnStoryViewController: WriteYourOwnStoryCellDelegate {
     
     func sendPressed() {
-        print("Send Pressed 2")
-        self.dismiss(animated: true)
+        // TODO: Here we should reload tableview data, and send user back to the selectedcategoryviewcontroller with new array from database.
+        self.dismiss(animated: true) {
+            BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: 10)
+            botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])
+            self.writeOwnStoryViewControllerDelegate?.newStorySendPressed()
+        }
     }
     
 }

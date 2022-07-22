@@ -71,11 +71,12 @@ extension UIViewController {
         self.present(vc, animated: true, completion: nil);
     }
     
-    func openWriteYourStoryPage() {
+    func openWriteYourStoryPage(viewController: SelectedCategoryViewController) {
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
         let vc: WriteOwnStoryViewController = storyboard.instantiateViewController(withIdentifier: "WriteOwnStoryViewControllerID") as! WriteOwnStoryViewController;
         
+        vc.writeOwnStoryViewControllerDelegate = viewController
         vc.modalPresentationCapturesStatusBarAppearance = true
         vc.modalPresentationStyle = .overFullScreen;
         

@@ -699,11 +699,11 @@
                                 <rect key="frame" x="0.0" y="80" width="414" height="816"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SignUpPageCell1ID" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SignUpPageCell1ID" rowHeight="643" id="niS-nE-LAT" customClass="SignUpPageCell1" customModule="bother" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="643"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="SignUpPageCell1ID" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SignUpPageCell1ID" rowHeight="716" id="niS-nE-LAT" customClass="SignUpPageCell1" customModule="bother" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="716"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="niS-nE-LAT" id="i1H-8V-MR9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="643"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.and.pencil.and.ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Lg8-Zb-Ta2">
@@ -804,19 +804,36 @@
                                                         <action selector="btnSignUpClicked:" destination="niS-nE-LAT" eventType="touchUpInside" id="xrN-YW-PAz"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XU0-jS-7cv">
+                                                    <rect key="frame" x="47" y="655" width="323" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="323" id="VwP-dX-Zj4"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="nb1-kz-Zq4"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title=""/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="storyboard.Already*a*member"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="btnAlreadyMember:" destination="niS-nE-LAT" eventType="touchUpInside" id="vgx-6k-Pww"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="XU0-jS-7cv" firstAttribute="leading" secondItem="i1H-8V-MR9" secondAttribute="leadingMargin" constant="27" id="1K5-ez-t7w"/>
                                                 <constraint firstItem="C4x-3u-kOB" firstAttribute="leading" secondItem="i1H-8V-MR9" secondAttribute="leadingMargin" constant="27" id="4BT-3H-Bob"/>
                                                 <constraint firstItem="C4x-3u-kOB" firstAttribute="top" secondItem="0Rc-FT-QX4" secondAttribute="bottom" constant="13" id="8ZT-zm-o2e"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="unN-oM-xka" secondAttribute="trailing" priority="999" constant="26" id="9tT-RT-P91"/>
                                                 <constraint firstItem="KT0-dV-hNa" firstAttribute="top" secondItem="pvd-5J-LJg" secondAttribute="bottom" constant="26.5" id="ASq-Ms-Fgc"/>
                                                 <constraint firstItem="unN-oM-xka" firstAttribute="top" secondItem="YAe-kv-si3" secondAttribute="bottom" constant="33" id="AaL-DP-Ikq"/>
                                                 <constraint firstItem="cc4-lY-YPU" firstAttribute="leading" secondItem="i1H-8V-MR9" secondAttribute="leadingMargin" id="Dfi-pV-hNK"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="zG9-hO-2Qp" secondAttribute="bottom" constant="20" id="GMU-SL-p6j"/>
                                                 <constraint firstItem="YAe-kv-si3" firstAttribute="leading" secondItem="i1H-8V-MR9" secondAttribute="leadingMargin" constant="27" id="IpK-DK-0uF"/>
+                                                <constraint firstItem="XU0-jS-7cv" firstAttribute="top" secondItem="zG9-hO-2Qp" secondAttribute="bottom" constant="43" id="K4O-RT-dZJ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="pvd-5J-LJg" secondAttribute="trailing" constant="24" id="KYc-uq-502"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="cc4-lY-YPU" secondAttribute="trailing" constant="24" id="LlR-ya-Ao6"/>
                                                 <constraint firstItem="pvd-5J-LJg" firstAttribute="top" secondItem="cc4-lY-YPU" secondAttribute="bottom" constant="8" symbolic="YES" id="Mop-vJ-rJc"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XU0-jS-7cv" secondAttribute="bottom" constant="19" id="Vdj-ZH-fpd"/>
                                                 <constraint firstItem="zG9-hO-2Qp" firstAttribute="leading" secondItem="i1H-8V-MR9" secondAttribute="leadingMargin" constant="93" id="ViZ-Ij-E9v"/>
                                                 <constraint firstItem="Lg8-Zb-Ta2" firstAttribute="leading" secondItem="i1H-8V-MR9" secondAttribute="leadingMargin" constant="100" id="WoQ-xG-N5v"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="zG9-hO-2Qp" secondAttribute="trailing" constant="92" id="Wwe-XE-kdS"/>
@@ -824,6 +841,7 @@
                                                 <constraint firstItem="YAe-kv-si3" firstAttribute="top" secondItem="KT0-dV-hNa" secondAttribute="bottom" constant="13.5" id="ZOk-tG-nP0"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Lg8-Zb-Ta2" secondAttribute="trailing" constant="99" id="af9-d4-Vmp"/>
                                                 <constraint firstItem="0Rc-FT-QX4" firstAttribute="leading" secondItem="i1H-8V-MR9" secondAttribute="leadingMargin" constant="27" id="auf-bJ-Iqb"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XU0-jS-7cv" secondAttribute="trailing" constant="24" id="cBJ-BD-08S"/>
                                                 <constraint firstItem="zG9-hO-2Qp" firstAttribute="top" secondItem="C4x-3u-kOB" secondAttribute="bottom" constant="41" id="djU-ge-jhl"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="C4x-3u-kOB" secondAttribute="trailing" constant="26" id="eSd-4W-W4v"/>
                                                 <constraint firstItem="euJ-pg-VgJ" firstAttribute="leading" secondItem="KT0-dV-hNa" secondAttribute="trailing" constant="8" symbolic="YES" id="ft6-6o-HEe"/>
