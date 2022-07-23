@@ -10,9 +10,10 @@ target 'bother' do
 	pod 'FirebaseAnalytics'
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
-  	pod 'FCAlertView'
-  	pod 'IQKeyboardManagerSwift'
-  	pod 'L10n-swift', '~> 5.10'
+  pod 'FirebaseFunctions', '~> 9.3'
+  pod 'SCLAlertView'
+  pod 'IQKeyboardManagerSwift'
+  pod 'L10n-swift', '~> 5.10'
 
 
 end

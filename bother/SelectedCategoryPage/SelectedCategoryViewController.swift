@@ -7,7 +7,7 @@
 
 import UIKit
 import FirebaseAuth
-import FCAlertView
+import SCLAlertView
 
 class SelectedCategoryViewController: UIViewController {
     
@@ -73,33 +73,21 @@ class SelectedCategoryViewController: UIViewController {
         botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])
         botherObjectArray.removeAll()
         for index in botherArray {
-            let newBother = Bother(botherText: index, botherAnswer: nil)
+            let newBother = Bother(botherOwner: Auth.auth().currentUser!.uid,
+                                   botherText: index,
+                                   botherAnswer: nil)
             botherObjectArray.append(newBother)
             print("BotherOBjArr: \(botherObjectArray)")
         }
+        
         self.tableView.reloadData()
         
     }
     
     @objc func showSuccessView(){
         DispatchQueue.main.async {
-            let alert = FCAlertView()
-            let homeImage = UIImage(systemName: "house", withConfiguration: nil)
-            
-            // TODO: Here's working fine. Rounded corners need. Also button done click should take the user previous view controller. Maybe just dismiss can work.
-            DispatchQueue.main.async {
-                alert.showAlert(inView: self,
-                                withTitle: "Done",
-                                withSubtitle: "main.Spend*some*time*here".l10n(),
-                                withCustomImage: homeImage,
-                                withDoneButtonTitle: "main.Done".l10n(),
-                                andButtons: ["Done"]) // Set your button titles here
-                alert.dismissOnOutsideTouch = true
-                alert.colorScheme = .red // Replace "Blue" with your preferred color from the image above
-                alert.titleColor = .purple
-                alert.subTitleColor = .orange
-                alert.cornerRadius = 4
-             }
+          //  "main.Spend*some*time*here".l10n()
+            SCLAlertView().showInfo("main.Spend*some*time*here".l10n(), subTitle: "You are great")
         }
     }
 }

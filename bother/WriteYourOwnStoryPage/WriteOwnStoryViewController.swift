@@ -56,15 +56,10 @@ extension WriteOwnStoryViewController: UITableViewDelegate, UITableViewDataSourc
         
         return cell
     }
-    
-    
-    
-    
 }
 
 
 extension WriteOwnStoryViewController: WriteYourOwnStoryCellDelegate {
-    
     func sendPressed() {
         // TODO: Here we should reload tableview data, and send user back to the selectedcategoryviewcontroller with new array from database.
         self.dismiss(animated: true) {

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FCAlertView
+import SCLAlertView
 import FirebaseAuth
 import FirebaseCore
 
@@ -35,7 +35,7 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
         print("SelectedMainCategory1: \(selectedMainCategory)")
-
+        
     }
     
 }
@@ -47,7 +47,7 @@ extension SignInViewController : UITableViewDelegate {
     
 }
 extension SignInViewController : UITableViewDataSource {
-        
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -65,45 +65,16 @@ extension SignInViewController : SignInPageCell1Delegate {
             if let email = cell.emailSignIn.text {
                 if email.isValidEmail {
                     Auth.auth().sendPasswordReset(withEmail: email) { error in
-                        let alert = FCAlertView()
-                        let homeImage = UIImage(systemName: "house", withConfiguration: nil)
-                        DispatchQueue.main.async {
-                            alert.showAlert(inView: self,
-                                            withTitle: "E-Mail Sent",
-                                            withSubtitle: "Check your mailbox for password restore mail. ",
-                                            withCustomImage: homeImage,
-                                            withDoneButtonTitle: "Okey",
-                                            andButtons: nil) // Set your button titles here
-                            alert.dismissOnOutsideTouch = true
-                            alert.colorScheme = .red // Replace "Blue" with your preferred color from the image above
-                            alert.titleColor = .purple
-                            alert.subTitleColor = .orange
-                            alert.autoHideSeconds = 5 // Replace 5 with the number of Seconds you'd like the view to appear for before dismissing itself
-                            alert.cornerRadius = 4
-                        }
+                    // TODO: Localize
+                    SCLAlertView().showInfo("Check your mailbox for password restore mail. ", subTitle: "You are great")
                     }
                 } else {
-                    let alert = FCAlertView()
-                    let homeImage = UIImage(systemName: "house", withConfiguration: nil)
-                    DispatchQueue.main.async {
-                        alert.showAlert(inView: self,
-                                        withTitle: "Invalid E-mail",
-                                        withSubtitle: "Please check your e-mail adress ",
-                                        withCustomImage: homeImage,
-                                        withDoneButtonTitle: "Okey",
-                                        andButtons: nil) // Set your button titles here
-                        alert.dismissOnOutsideTouch = true
-                        alert.colorScheme = .red // Replace "Blue" with your preferred color from the image above
-                        alert.titleColor = .purple
-                        alert.subTitleColor = .orange
-                        alert.autoHideSeconds = 5 // Replace 5 with the number of Seconds you'd like the view to appear for before dismissing itself
-                        alert.cornerRadius = 4
-                        
-                    }
+                    SCLAlertView().showInfo("Invalid E-mail", subTitle: "Please check your e-mail adress ")
                 }
             }
         }
     }
+    
     
     func signInClicked() {
         if let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? SignInPageCell1 {
@@ -136,7 +107,7 @@ extension SignInViewController : SignInPageCell1Delegate {
     func googleSignInClicked() {
         
         print("")
-
+        
         
     }
 }

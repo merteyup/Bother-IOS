@@ -10,6 +10,7 @@ import FirebaseAuth
 
 class BotherUser {
     
+    // Uid, App version, isvipmember
     
     //MARK: - Variables
     private var appVersion : String?
@@ -30,9 +31,8 @@ class BotherUser {
     private var createdAt : Double?
     private var isSuspended : Bool?
     private var isSawWriteStoryPage : Bool?
-
-    
     private var sessionBotherLimit : Int = 10
+    private var gender : Int?
 
     
     // deviceType => 0-iOS, 1-Android, -1 YOK
@@ -178,7 +178,13 @@ class BotherUser {
     func setTotalBotherCount(totalBotherCount: Int?){
         self.totalBotherCount = totalBotherCount;
     }
- 
+    //----
+    func getGender() -> Int?{
+        return gender}
+    
+    func setGender(gender: Int?){
+        self.gender = gender;
+    }
     
     
     
@@ -189,3 +195,5 @@ class BotherUser {
         }
     }
 }
+
+
