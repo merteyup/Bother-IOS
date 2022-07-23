@@ -53,7 +53,7 @@ extension UIViewController {
         let vc: SignUpViewController = storyboard.instantiateViewController(withIdentifier: "SignUpViewControllerID") as! SignUpViewController;
         
         vc.modalPresentationCapturesStatusBarAppearance = true
-        vc.modalPresentationStyle = .overFullScreen;
+        vc.modalPresentationStyle = .currentContext;
         vc.selectedMainCategory = selectedMainCategory
 
         self.present(vc, animated: true, completion: nil);
@@ -65,7 +65,7 @@ extension UIViewController {
         let vc: SignInViewController = storyboard.instantiateViewController(withIdentifier: "SignInViewControllerID") as! SignInViewController;
         
         vc.modalPresentationCapturesStatusBarAppearance = true
-        vc.modalPresentationStyle = .overFullScreen;
+        vc.modalPresentationStyle = .currentContext;
         vc.selectedMainCategory = selectedMainCategory
         
         self.present(vc, animated: true, completion: nil);

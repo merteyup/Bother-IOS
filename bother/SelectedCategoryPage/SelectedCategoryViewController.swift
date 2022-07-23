@@ -26,18 +26,21 @@ class SelectedCategoryViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-        
+    @IBOutlet weak var btnSignIn: UIButton!
+    
+    
     // MARK: - Actions
     @IBAction func actionDismiss(_ sender: Any) {
         dismiss(animated: true)
     }
     
     
+    @IBAction func actionSignIn(_ sender: Any) {
+        openSignInViewController(selectedMainCategory: selectedMainCategory)
+    }
+    
+    
     @IBAction func btnResetDailyBother(_ sender: Any) {
-        
-        
-        
-        
         DispatchQueue.main.async {
             self.openWriteYourStoryPage(viewController: self)
         }
@@ -46,34 +49,49 @@ class SelectedCategoryViewController: UIViewController {
         } else {
             openWriteYourStoryPage(viewController: self)
         }
-        
     }
  
  
     // MARK: - Statements
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
+        notificationObservers()
     }
     
   
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-       
-        
+        checkIsLoggedIn()
         getBothersFromDB()
     }
     
     // MARK: - Functions
     
+    func checkIsLoggedIn() {
+        
+        if Auth.auth().currentUser != nil {
+            btnSignIn.alpha = 0
+        } else {
+            btnSignIn.alpha = 1
+        }
+        
+    }
+    
+    fileprivate func notificationObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "userSignedIn"), object: nil)
+    }
     
     func getBothersFromDB() {
+
         
         botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])
         botherObjectArray.removeAll()
         for index in botherArray {
-            let newBother = Bother(botherOwner: Auth.auth().currentUser!.uid,
+            let newBother = Bother(botherOwner: Auth.auth().currentUser != nil ? Auth.auth().currentUser!.uid : "RandomUser",
                                    botherText: index,
                                    botherAnswer: nil)
             botherObjectArray.append(newBother)
@@ -194,7 +212,6 @@ extension SelectedCategoryViewController: UITableViewDataSource {
 
 
 extension SelectedCategoryViewController: WriteOwnStoryViewControllerDelegate {
-    
     func newStorySendPressed() {
         DispatchQueue.main.async {
             self.getBothersFromDB()

@@ -76,23 +76,27 @@ extension SignInViewController : SignInPageCell1Delegate {
     }
     
     
+    fileprivate func dismissMultipleViewControllers() {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: {
+            self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+        })
+    }
+    
     func signInClicked() {
         if let cell = self.tableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? SignInPageCell1 {
             if let email = cell.emailSignIn.text {
                 if let password = cell.passwordSignIn.text {
                     Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-                        guard let strongSelf = self else { return }
-                        if let selfSafe = self {
-                            if Auth.auth().currentUser != nil {
-                                // TODO: Go to the feed from here.
-                                print("actionSignInResult: User Logged In")
-                                DispatchQueue.main.async {
-                                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-                                    let vc = storyboard.instantiateViewController(withIdentifier: "MySubclassedTabBarControllerID") as! MySubclassedTabBarController;
-                                    vc.selectedIndex = 0
-                                    vc.modalPresentationCapturesStatusBarAppearance = true
-                                    vc.modalPresentationStyle = .overFullScreen;
-                                    selfSafe.present(vc, animated: false, completion: nil);
+                        if let currentUser = Auth.auth().currentUser {
+                            BotherUser.getUserInfoCloud { result in
+                                if result {
+                                    if self != nil {
+                                        NotificationCenter.default.post(name: Notification.Name(rawValue: "userSignedIn"), object: self?.selectedMainCategory, userInfo: nil);
+                                        self!.dismissMultipleViewControllers()
+                                    }
+                                } else {
+                                    // TODO: Localization
+                                    SCLAlertView().showError("Something went wrong.", subTitle: "Please try again or report us.")
                                 }
                             }
                         }
@@ -100,14 +104,11 @@ extension SignInViewController : SignInPageCell1Delegate {
                 }
             }
         }
-        print("SignInClicked")
     }
     
     
     func googleSignInClicked() {
-        
         print("")
-        
-        
     }
+    
 }

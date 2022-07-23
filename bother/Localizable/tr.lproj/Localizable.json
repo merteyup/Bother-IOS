@@ -13,6 +13,7 @@
                 "Relationships" : "İlişkiler",
                 "Random" : "Rastgele",
                 "Sign*Up" : "Kayıt Ol",
+                "Sign*In" : "Giriş Yap",
                 "Premium" : "Premium",
                 "How*it*Works?" : "Nasıl Çalışır?",
                 "Notifications" : "Bildirimler",
@@ -34,7 +35,10 @@
                 "Agreed*by" : "Katılan ",
                 "Disagreed*by" : "Katılmayan ",
                 "people" : "kişi",
-                "Bother" : "Dert: "
+                "Bother" : "Dert: ",
+                "Sign*In" : "Giriş Yap"
+
+                
 
     }
 }

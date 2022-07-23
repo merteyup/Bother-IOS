@@ -30,10 +30,10 @@
             filePath = "bother/SelectedCategoryPage/SelectedCategoryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "showSuccessView()"
-            landmarkType = "7">
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "SelectedCategoryViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

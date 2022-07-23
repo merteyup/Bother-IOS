@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import SCLAlertView
 
 
 class SignUpViewController: UIViewController {
@@ -44,6 +45,10 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+
+        
         var handle = Auth.auth().addStateDidChangeListener { auth, user in
             if user != nil {
               //  self.lblAuthState.text = "Logged In"
@@ -54,7 +59,6 @@ class SignUpViewController: UIViewController {
     }
     
     // MARK: - Functions
-    // TODO: Move this into signUpHelper.signUp()
     func createUpdateUserObject() {
         if let user = Auth.auth().currentUser {
             let uid = user.uid
@@ -69,14 +73,22 @@ class SignUpViewController: UIViewController {
             BotherUser.shared.setEmail(email: email)
             BotherUser.shared.setFirebaseUID(firebaseUID: uid)
             BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: 30)
-                // TODO:
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "newUserCreated"), object: selectedMainCategory, userInfo: nil);
-            print("AlertButtonWorked")
-            dismiss(animated: true) {
-                self.openSelectedCategory(selectedMainCategory: self.selectedMainCategory)
+            BotherUser.shared.setUserRole(userRole: 2)
+            BotherUser.createUpdateUser { result in
+                // TODO: Localize
+                self.dismiss(animated: true) {
+                    SCLAlertView().showSuccess("User Created", subTitle: "Enjoy your time", closeButtonTitle: "Done").setDismissBlock {
+                        DispatchQueue.main.async {
+                            self.dismiss(animated: true,completion: {
+                                self.presentingViewController?.dismiss(animated: true)
+                            })
+                            NotificationCenter.default.post(name: Notification.Name(rawValue: "newUserCreated"), object: self.selectedMainCategory, userInfo: nil);
+                        }
+                    }
+                }
             }
-            
         } else {
+            // TODO: Alert
             print ("Error: User Not Created")
         }
     }
@@ -115,15 +127,26 @@ extension SignUpViewController: SignUpPageCell1Delegate {
             if let email = cell.txtEmail.text {
                 if let password = cell.txtPassword.text {
                     Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                        BotherUser.shared.setAuthMethod(authMethod: 0)
                         self.createUpdateUserObject()
-                        print("SignUp")
                     }
                 } else {
-                    ("Print: There's no Password. Enter mail address")
+                    // TODO: Add Alertview in here.
+                    SCLAlertView().showError("There's no Password.", subTitle: "Please enter one")
                 }
             } else {
-                ("Print: There's no email. Enter mail address")
+                SCLAlertView().showError("There's no E-mail address.", subTitle: "Please enter one")
             }
+        }
+    }
+}
+
+extension UIWindow {
+    static var key: UIWindow? {
+        if #available(iOS 13, *) {
+            return UIApplication.shared.windows.first { $0.isKeyWindow }
+        } else {
+            return UIApplication.shared.keyWindow
         }
     }
 }

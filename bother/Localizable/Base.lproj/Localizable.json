@@ -13,6 +13,7 @@
                 "Relationships" : "Relationships",
                 "Random" : "Random",
                 "Sign*Up" : "Sign Up",
+                "Sign*In" : "Sign In",
                 "Premium" : "Premium",
                 "How*it*Works?" : "How it Works?",
                 "Notifications" : "Notifications",
@@ -42,7 +43,8 @@
                 "Disagreed*by" : "Disagreed by: ",
                 "people" : "people",
                 "Bother" : "Bother: ",
-                "Already*a*member" : "Already a member? Sign In."
+                "Already*a*member" : "Already a member? Sign In.",
+                "Sign*In" : "Sign In"
 
 
     }

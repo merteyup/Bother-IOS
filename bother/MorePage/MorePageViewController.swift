@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import SCLAlertView
 
 class MorePageViewController: UIViewController {
     
@@ -37,6 +38,8 @@ class MorePageViewController: UIViewController {
             let firebaseAuth = Auth.auth()
             do {
                 try firebaseAuth.signOut()
+                // TODO: Localize
+                SCLAlertView().showSuccess("Success", subTitle: "Logged Out")
                 print("Signed Out")
             } catch let signOutError as NSError {
                 print("Error signing out: %@", signOutError)

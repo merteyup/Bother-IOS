@@ -25,7 +25,8 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let currentUser = Auth.auth().currentUser?.uid {
+     /*
+      if let currentUser = Auth.auth().currentUser?.uid {
                var parameters = ["docId" : "5S9WoQYrvU3Lf9N0yEqf"]
                as [String : Any]
                functions.httpsCallable("deleteStoryCloud").call(parameters){ (result, error) in
@@ -40,6 +41,7 @@ class CategoryViewController: UIViewController {
                    }
                }
            }
+      */
              
      
         
@@ -84,29 +86,7 @@ class CategoryViewController: UIViewController {
         
         
         
-  /*
-        if let currentUser = Auth.auth().currentUser?.uid {
-            
-            var parameters =      ["firebaseUID" : currentUser,
-                                   "appVersion": 1,
-                                   "isVipMember" : false] as [String : Any]
-            
-            functions.httpsCallable("createUpdateUserProfileCloud").call(parameters){ (result, error) in
-                if error == nil{
-                    
-                    //  print("FuncWorked :\(result?.data)")
-                    if let firstArray = result?.data as? NSArray{
-                        
-                        //   self.spliceArrayAndGetOneListing(array : firstArray)
-                    }
-                } else {
-                    print("FuncWorkedNo")
-                    
-                    //  SCLAlertView().showError("main.Error".l10n(), subTitle: "main.Please*try*again".l10n())
-                }
-            }
-        }
-        */
+ 
         
     }
     

@@ -1131,13 +1131,31 @@
                                             <action selector="actionDismiss:" destination="39p-VI-WqR" eventType="touchUpInside" id="s9a-MB-FCD"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5J-Pg-3ld">
+                                        <rect key="frame" x="302" y="41" width="104" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="htM-79-sk2"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="lSe-M8-SF6"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="storyboard.Sign*In"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="actionSignIn:" destination="39p-VI-WqR" eventType="touchUpInside" id="CN9-ya-0IM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
+                                    <constraint firstItem="R5J-Pg-3ld" firstAttribute="top" secondItem="GhT-hC-Xwy" secondAttribute="top" constant="41" id="Mga-6Q-Kzy"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="fPs-vM-5al"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="lIp-Xx-26F"/>
                                     <constraint firstItem="hjQ-Kq-xZF" firstAttribute="leading" secondItem="GhT-hC-Xwy" secondAttribute="leading" constant="20" symbolic="YES" id="r1N-8s-a4f"/>
                                     <constraint firstAttribute="bottom" secondItem="hjQ-Kq-xZF" secondAttribute="bottom" constant="8" id="tYp-5W-NYo"/>
+                                    <constraint firstAttribute="trailing" secondItem="R5J-Pg-3ld" secondAttribute="trailing" constant="8" id="upQ-bI-Y4s"/>
                                     <constraint firstItem="hjQ-Kq-xZF" firstAttribute="top" secondItem="GhT-hC-Xwy" secondAttribute="top" constant="41" id="vK0-m8-hh1"/>
                                 </constraints>
                             </view>
@@ -1155,6 +1173,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnSignIn" destination="R5J-Pg-3ld" id="sr0-Fr-2ms"/>
                         <outlet property="tableView" destination="txD-Ut-CLZ" id="Klt-mo-wzD"/>
                     </connections>
                 </viewController>
