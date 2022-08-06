@@ -59,6 +59,18 @@ extension UIViewController {
         self.present(vc, animated: true, completion: nil);
     }
     
+    
+    func openHelpViewController(){
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc: HelpViewController = storyboard.instantiateViewController(withIdentifier: "HelpViewControllerID") as! HelpViewController;
+        
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        vc.modalPresentationStyle = .currentContext;
+        
+        self.present(vc, animated: true, completion: nil);
+    }
+    
     func openSignInViewController(selectedMainCategory: Int){
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
@@ -71,12 +83,14 @@ extension UIViewController {
         self.present(vc, animated: true, completion: nil);
     }
     
-    func openWriteYourStoryPage(viewController: SelectedCategoryViewController) {
+    func openWriteYourStoryPage(viewController: SelectedCategoryViewController?) {
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
         let vc: WriteOwnStoryViewController = storyboard.instantiateViewController(withIdentifier: "WriteOwnStoryViewControllerID") as! WriteOwnStoryViewController;
         
-        vc.writeOwnStoryViewControllerDelegate = viewController
+        if let viewController = viewController {
+            vc.writeOwnStoryViewControllerDelegate = viewController
+        }
         vc.modalPresentationCapturesStatusBarAppearance = true
         vc.modalPresentationStyle = .overFullScreen;
         

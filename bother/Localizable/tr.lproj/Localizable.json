@@ -23,20 +23,35 @@
                 "Log*Out" : "Çıkış Yap",
                 "Delete*Account" : "Hesabı Sil",
                 "Buy*me*coffee" : "İki Bira Ismarla?",
-                "Spend*some*time*here" : "Buralarda biraz vakit geçir. Göreceksin, etrafında bazı şeylerden rahatsız olan senin gibi insanlar var."
+                "Spend*some*time*here" : "Buralarda biraz vakit geçir. Göreceksin, etrafında bazı şeylerden rahatsız olan senin gibi insanlar var.",
+                "Sign*up*and*become" : "Kayıt ol ve uygulamayı limitsiz kullan.",
+                "Write*your*own" : "Kendi hikayeni yaz, paylaş, rahatla...",
+                "Are*You*Sure" : "Emin Misin?",
+                "Do*you*want*to" : "Çıkış yapmak istiyor musun?",
+                "Oopss" : "Oopss",
+                "Please*try*again" : "Lütfen tekrar deneyin",
+                "Thanks*for*your*time" : "Zaman ayırdığın için teşekkürler",
+                "All*Good" : "Tamamdır",
+                "Write*something*please" : "Lütfen bir şeyler yaz"
+                "Your*feedback*has*reached*us" : "Bildirimin bize ulaştı",
+                "Thanks" : "Teşekkürler"
+                
 
     },
     "storyboard":{
                 "Back" : "Geri",
                 "Save" : "Kaydet",
                 "Done" : "Tamam",
+                "Send" : "Gönder",
                 "Disagreed" : "Katılmıyorum",
                 "Agreed" : "Aynen",
                 "Agreed*by" : "Katılan ",
                 "Disagreed*by" : "Katılmayan ",
                 "people" : "kişi",
                 "Bother" : "Dert: ",
-                "Sign*In" : "Giriş Yap"
+                "Sign*In" : "Giriş Yap",
+                "Write" : "Yaz",
+                "Ask*help*or" : "Yardım isteyebilir ya da fikirlerini iletebilirsin."
 
                 
 

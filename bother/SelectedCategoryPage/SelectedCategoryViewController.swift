@@ -26,7 +26,7 @@ class SelectedCategoryViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var btnSignIn: UIButton!
+    @IBOutlet weak var btnWrite: UIButton!
     
     
     // MARK: - Actions
@@ -35,8 +35,8 @@ class SelectedCategoryViewController: UIViewController {
     }
     
     
-    @IBAction func actionSignIn(_ sender: Any) {
-        openSignInViewController(selectedMainCategory: selectedMainCategory)
+    @IBAction func actionWrite(_ sender: Any) {
+        openWriteYourStoryPage(viewController: nil)
     }
     
     
@@ -64,21 +64,11 @@ class SelectedCategoryViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        checkIsLoggedIn()
         getBothersFromDB()
     }
     
     // MARK: - Functions
-    
-    func checkIsLoggedIn() {
-        
-        if Auth.auth().currentUser != nil {
-            btnSignIn.alpha = 0
-        } else {
-            btnSignIn.alpha = 1
-        }
-        
-    }
+
     
     fileprivate func notificationObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
@@ -166,9 +156,9 @@ extension SelectedCategoryViewController: UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DailyLimitAchievedTableViewCellID", for: indexPath) as! DailyLimitAchievedTableViewCell
             if Auth.auth().currentUser == nil {
-                cell.headerAchievedLmt.text = "Sign up and become limitless user."
+                cell.headerAchievedLmt.text = "main.Sign*up*and*become".l10n()
             } else {
-                cell.headerAchievedLmt.text = "Write your own, share, relieve..."
+                cell.headerAchievedLmt.text = "main.Write*your*own".l10n()
             }
             return cell
         } else {

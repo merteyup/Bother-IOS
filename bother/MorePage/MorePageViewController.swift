@@ -52,7 +52,7 @@ class MorePageViewController: UIViewController {
     func showAlertView() {
         DispatchQueue.main.async {
             // Create the alert controller
-                 let alertController = UIAlertController(title: "Are You Sure", message: "Do you want to log out?", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "main.Are*You*Sure".l10n(), message: "main.Do*you*want*to".l10n(), preferredStyle: .alert)
 
                  // Create the actions
                 let okAction = UIAlertAction(title: "Yes", style: .destructive) {
@@ -94,6 +94,8 @@ extension MorePageViewController : UITableViewDelegate {
             
         } else if indexPath.row == 5 {
             
+            openHelpViewController()
+            
         } else if indexPath.row == 6 {
             
             openSelectLanguageViewController()
@@ -127,22 +129,31 @@ extension MorePageViewController : UITableViewDataSource {
         
         if indexPath.row == 0 {
             cell.textLabel?.text = "main.Sign*Up".l10n()
+            cell.imageView?.image = UIImage(systemName: "person.2.wave.2")
         } else if indexPath.row == 1 {
             cell.textLabel?.text = "main.Premium".l10n()
+            cell.imageView?.image = UIImage(systemName: "star.circle")
         } else if indexPath.row == 2 {
             cell.textLabel?.text = "main.How*it*Works?".l10n()
+            cell.imageView?.image = UIImage(systemName: "questionmark.video")
         }  else if indexPath.row == 3 {
             cell.textLabel?.text = "main.Notifications".l10n()
+            cell.imageView?.image = UIImage(systemName: "bell")
         } else if indexPath.row == 4 {
             cell.textLabel?.text = "main.Terms*of*Usage".l10n()
+            cell.imageView?.image = UIImage(systemName: "character.book.closed")
         } else if indexPath.row == 5 {
             cell.textLabel?.text = "main.Help".l10n()
+            cell.imageView?.image = UIImage(systemName: "hand.raised")
         } else if indexPath.row == 6 {
             cell.textLabel?.text = "main.Language".l10n()
+            cell.imageView?.image = UIImage(systemName: "character.bubble")
         } else if indexPath.row == 7 {
             cell.textLabel?.text = "main.Log*Out".l10n()
+            cell.imageView?.image = UIImage(systemName: "stop.circle")
         } else if indexPath.row == 8 {
             cell.textLabel?.text = "main.Delete*Account".l10n()
+            cell.imageView?.image = UIImage(systemName: "trash")
         } /* else if indexPath.row == 9 {
             cell.textLabel?.text = "main.Buy*me*coffee".l10n()
         } */

@@ -45,26 +45,7 @@ class CategoryViewController: UIViewController {
              
      
         
-   /*   if let currentUser = Auth.auth().currentUser?.uid {
-            var parameters = ["firebaseUID" : currentUser,
-                              "category" : 1,
-                              "botherText": "Buraya dbye yazılacak bir text gireyim4.",
-                              "title" : "Title yazıldı2"]
-            as [String : Any]
-            functions.httpsCallable("createStoryCloud").call(parameters){ (result, error) in
-                if error == nil{
-                    
-                    print("FuncWorked :\(result?.data)")
-                    if let firstArray = result?.data as? NSArray{
-                        //   self.spliceArrayAndGetOneListing(array : firstArray)
-                    }
-                } else {
-                    print("FuncWorkedNo")
-                    //  SCLAlertView().showError("main.Error".l10n(), subTitle: "main.Please*try*again".l10n())
-                }
-            }
-        }
-      */
+   
         
         /*
         

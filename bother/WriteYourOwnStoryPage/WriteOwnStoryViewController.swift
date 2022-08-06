@@ -6,7 +6,8 @@
 //
 
 import UIKit
-
+import FirebaseAuth
+import FirebaseFunctions
 
 // TODO: Back button should be fade in for users which will not sign in.
 
@@ -19,7 +20,8 @@ class WriteOwnStoryViewController: UIViewController {
     
     // MARK: - Variables
     weak var writeOwnStoryViewControllerDelegate : WriteOwnStoryViewControllerDelegate?
-    
+    lazy var functions = Functions.functions();
+
 
     // MARK: - Outlets
    
@@ -35,6 +37,28 @@ class WriteOwnStoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func createStoryCloud (bother: Bother) {
+        if let currentUser = Auth.auth().currentUser?.uid {
+                var parameters = ["firebaseUID" : currentUser,
+                                  "category" : bother.botherCategory,
+                                  "botherText": bother.botherText,
+                                  "title" : bother.botherTitle]
+                as [String : Any]
+                functions.httpsCallable("createStoryCloud").call(parameters){ (result, error) in
+                    if error == nil{
+                        
+                        print("FuncWorked :\(result?.data)")
+                        if let firstArray = result?.data as? NSArray{
+                            //   self.spliceArrayAndGetOneListing(array : firstArray)
+                        }
+                    } else {
+                        print("FuncWorkedNo")
+                        //  SCLAlertView().showError("main.Error".l10n(), subTitle: "main.Please*try*again".l10n())
+                    }
+                }
+            }
     }
 }
 
@@ -60,9 +84,12 @@ extension WriteOwnStoryViewController: UITableViewDelegate, UITableViewDataSourc
 
 
 extension WriteOwnStoryViewController: WriteYourOwnStoryCellDelegate {
-    func sendPressed() {
+    func sendPressed(bother: Bother) {
         // TODO: Here we should reload tableview data, and send user back to the selectedcategoryviewcontroller with new array from database.
         self.dismiss(animated: true) {
+            
+
+            self.createStoryCloud(bother: bother)
             BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: 10)
             botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])
             self.writeOwnStoryViewControllerDelegate?.newStorySendPressed()

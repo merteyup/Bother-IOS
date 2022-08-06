@@ -23,9 +23,20 @@
                 "Log*Out" : "Log Out",
                 "Delete*Account" : "Delete Account",
                 "Buy*me*coffee" : "Buy*me*coffee",
-                "Spend*some*time*here" : "Spend some time here. You'll see there's a lot of people around you, bothered with something."
+                "Spend*some*time*here" : "Spend some time here. You'll see there's a lot of people around you, bothered with something.",
+                "Sign*up*and*become" : "Sign up and become limitless user.",
+                "Write*your*own" : "Write your own story, share, relieve...",
+                "Are*You*Sure" : "Are You Sure",
+                "Do*you*want*to" : "Do you want to log out",
+                "Oopss" : "Oopss",
+                "Please*try*again" : "Please try again",
+                "Thanks*for*your*time" : "Thanks for your time",
+                "All*Good" : "All*Good",
+                "Write*something*please" : "Write something please",
+                "Your*feedback*has*reached*us" : "Your feedback has reached us",
+                "Thanks" : "Thanks"
 
-                
+
                 
                 
                 
@@ -37,6 +48,7 @@
                 "Back" : "Back",
                 "Save" : "Save",
                 "Done" : "Done",
+                "Send" : "Send",
                 "Disagreed" : "Disagreed",
                 "Agreed" : "Agreed",
                 "Agreed*by" : "Agreed by: ",
@@ -44,7 +56,9 @@
                 "people" : "people",
                 "Bother" : "Bother: ",
                 "Already*a*member" : "Already a member? Sign In.",
-                "Sign*In" : "Sign In"
+                "Sign*In" : "Sign In",
+                "Write" : "Write",
+                "Ask*help*or" : "You can ask help or give feedback."
 
 
     }

@@ -39,6 +39,7 @@
 		C4DF5E02288734B800E50813 /* ViewBackgroundFWriteStory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */; };
 		C4DF5E04288739DD00E50813 /* WriteYourOwnStoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */; };
 		C4DF5E0628876BEA00E50813 /* SelectLanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DF5E0528876BEA00E50813 /* SelectLanguageViewController.swift */; };
+		C4E722F82899C6EC004F6A3D /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E722F72899C6EC004F6A3D /* HelpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBackgroundFWriteStory.swift; sourceTree = "<group>"; };
 		C4DF5E03288739DD00E50813 /* WriteYourOwnStoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteYourOwnStoryCell.swift; sourceTree = "<group>"; };
 		C4DF5E0528876BEA00E50813 /* SelectLanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewController.swift; sourceTree = "<group>"; };
+		C4E722F72899C6EC004F6A3D /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		DB1CF4A7707CF083F885D16F /* Pods-bother.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bother.release.xcconfig"; path = "Target Support Files/Pods-bother/Pods-bother.release.xcconfig"; sourceTree = "<group>"; };
 		E36C5B525F90288A9F3747A4 /* Pods_bother.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bother.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -241,6 +243,7 @@
 				C40290D828888E7A00E3621F /* MorePage */,
 				C45CD58D2884B0B500760438 /* MySubclassedTabBarController.swift */,
 				C40290D928888E8C00E3621F /* SignInPage */,
+				C4E722F62899C6D0004F6A3D /* HelpPage */,
 				C40290DA28888E9600E3621F /* SignUpPage */,
 				C40290DB28888EA900E3621F /* WriteYourOwnStoryPage */,
 				C40290DC28888EBA00E3621F /* LanguagePage */,
@@ -264,6 +267,14 @@
 				C40290D02888871100E3621F /* Localizable.json */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		C4E722F62899C6D0004F6A3D /* HelpPage */ = {
+			isa = PBXGroup;
+			children = (
+				C4E722F72899C6EC004F6A3D /* HelpViewController.swift */,
+			);
+			path = HelpPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,6 +408,7 @@
 				C45CD5A02884B0B900760438 /* MySubclassedTabBarController.swift in Sources */,
 				C45CD5B02884B0B900760438 /* SelectedCategoryTableViewCell.swift in Sources */,
 				C4CD0B852884AD7000F4667F /* AppDelegate.swift in Sources */,
+				C4E722F82899C6EC004F6A3D /* HelpViewController.swift in Sources */,
 				C45CD5AD2884B0B900760438 /* SignUpViewController.swift in Sources */,
 				C45CD59F2884B0B900760438 /* SignInPageCell1.swift in Sources */,
 				C45CD5A92884B0B900760438 /* SelectedCategoryViewController.swift in Sources */,
