@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseFunctions
 
+
 // TODO: Back button should be fade in for users which will not sign in.
 
 protocol WriteOwnStoryViewControllerDelegate : AnyObject {
@@ -37,7 +38,12 @@ class WriteOwnStoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+      
+        
     }
+    
+    
     
     func createStoryCloud (bother: Bother) {
         if let currentUser = Auth.auth().currentUser?.uid {

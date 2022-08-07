@@ -14,6 +14,7 @@ target 'bother' do
   pod 'SCLAlertView'
   pod 'IQKeyboardManagerSwift'
   pod 'L10n-swift', '~> 5.10'
+  pod 'Google-Mobile-Ads-SDK'
 
 
 end

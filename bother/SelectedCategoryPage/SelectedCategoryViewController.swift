@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import SCLAlertView
+import GoogleMobileAds
 
 class SelectedCategoryViewController: UIViewController {
     
@@ -22,7 +23,8 @@ class SelectedCategoryViewController: UIViewController {
     var isDailyBotherFinished = false
     var botherObjectArray = [Bother]()
     var answeredBothersArray = [Bother]()
-    
+    private var interstitial: GADInterstitialAd?
+
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -65,10 +67,10 @@ class SelectedCategoryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getBothersFromDB()
+        requestAd ()
     }
     
     // MARK: - Functions
-
     
     fileprivate func notificationObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.showSuccessView), name: NSNotification.Name(rawValue: "newUserCreated"), object: nil)
@@ -77,7 +79,6 @@ class SelectedCategoryViewController: UIViewController {
     
     func getBothersFromDB() {
 
-        
         botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])
         botherObjectArray.removeAll()
         for index in botherArray {
@@ -92,34 +93,88 @@ class SelectedCategoryViewController: UIViewController {
         
     }
     
-    @objc func showSuccessView(){
+    @objc func showSuccessView() {
         DispatchQueue.main.async {
           //  "main.Spend*some*time*here".l10n()
             SCLAlertView().showInfo("main.Spend*some*time*here".l10n(), subTitle: "You are great")
         }
     }
+    
+    func requestAd () {
+        // MARK: TODO Change test id to normal one.
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/4411468910",
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
+        })
+    }
+    
+    fileprivate func showAd() {
+        if self.interstitial != nil {
+            self.interstitial?.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+        }
+    }
+    
+    
 }
 
 
 // MARK: - Extensions
+
+
+
+
 extension SelectedCategoryViewController: UITableViewDelegate, ActionYesOrNoDelegate {
     
     func actionYesOrNoClicked(answer: Int) {
 
     }
-    
+        
     func actionYesOrNoClicked(cell: SelectedCategoryTableViewCell) {
         if let indexPath = self.tableView.indexPath(for: cell){
             if botherArray.count > 0 {
               //  botherArray.remove(at: indexPath.row - 1)
                 if let dailyBotherLimit = BotherUser.shared.getSessionBotherLimit() {
                     BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: dailyBotherLimit - 1)
+                    if dailyBotherLimit == 1 {
+                        isDailyBotherFinished = true
+
+                        // MARK: TODO Localize
+                        let appearance = SCLAlertView.SCLAppearance(
+                            showCloseButton: false
+                        )
+                        var alertView = SCLAlertView(appearance: appearance)
+                        alertView.addButton("Watch Ad") {
+                            print("Pressed")
+                            self.showAd()
+                        }
+                        alertView.addButton("Write Story") {
+                            self.openWriteYourStoryPage(viewController: self)
+                        }
+                        
+                        DispatchQueue.main.async {
+                            alertView.showCustom("Daily Limit Achieved", subTitle: "Write a story or watch an ad for reset your daily limit.", color: .green, icon: (UIImage(systemName: "shareplay")  ?? UIImage(systemName: "pencil"))!)
+                        }
+                    }
+                    
                 }
             } else {
                 isDailyBotherFinished = true
             }
         }
     }
+    
+    
+  
+    
 }
 
 
@@ -207,4 +262,28 @@ extension SelectedCategoryViewController: WriteOwnStoryViewControllerDelegate {
             self.getBothersFromDB()
         }
     }
+}
+
+extension SelectedCategoryViewController : GADFullScreenContentDelegate {
+    
+    /// Tells the delegate that the ad failed to present full screen content.
+     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+       print("Ad did fail to present full screen content.")
+     }
+
+     /// Tells the delegate that the ad will present full screen content.
+     func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+       print("Ad will present full screen content.")
+     }
+
+     /// Tells the delegate that the ad dismissed full screen content.
+     func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+       print("Ad did dismiss full screen content.")
+         BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: 10)
+         isDailyBotherFinished = false
+         tableView.reloadData()
+     }
+    
+    
+    
 }

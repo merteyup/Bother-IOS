@@ -35,6 +35,7 @@
                 "Write*something*please" : "Write something please",
                 "Your*feedback*has*reached*us" : "Your feedback has reached us",
                 "Thanks" : "Thanks"
+            
 
     },
     "storyboard":{
@@ -50,7 +51,9 @@
                 "Bother" : "Bother: ",
                 "Sign*In" : "Sign In",
                 "Write" : "Write",
-                "Ask*help*or" : "You can ask help or give feedback."
+                "Ask*help*or" : "You can ask help or give feedback.",
+                "Read" : "Read",
+                "More" : "More"
 
 
 

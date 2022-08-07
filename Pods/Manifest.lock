@@ -669,6 +669,9 @@ PODS:
     - PromisesObjC (~> 2.1)
   - FirebaseMessagingInterop (9.3.0)
   - FirebaseSharedSwift (9.3.0)
+  - Google-Mobile-Ads-SDK (9.7.0):
+    - GoogleAppMeasurement (< 10.0, >= 7.0)
+    - GoogleUserMessagingPlatform (>= 1.1)
   - GoogleAppMeasurement (9.3.0):
     - GoogleAppMeasurement/AdIdSupport (= 9.3.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.7)
@@ -693,6 +696,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30910.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUserMessagingPlatform (2.0.0)
   - GoogleUtilities/AppDelegateSwizzler (7.7.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -794,6 +798,7 @@ DEPENDENCIES:
   - FirebaseAuth
   - FirebaseFirestore
   - FirebaseFunctions (~> 9.3)
+  - Google-Mobile-Ads-SDK
   - IQKeyboardManagerSwift
   - L10n-swift (~> 5.10)
   - SCLAlertView
@@ -815,8 +820,10 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseMessagingInterop
     - FirebaseSharedSwift
+    - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleDataTransport
+    - GoogleUserMessagingPlatform
     - GoogleUtilities
     - "gRPC-C++"
     - gRPC-Core
@@ -845,8 +852,10 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 54b40022cb06e462740c9f2b9fbe38b5e78a825a
   FirebaseMessagingInterop: af98663efee05115924de2f4123321183c3a2be6
   FirebaseSharedSwift: 8becafc1096ca5703ac03065ed80496023880ac0
+  Google-Mobile-Ads-SDK: 2685d6b3374b26de8a71f535614396e57cf80b13
   GoogleAppMeasurement: b907bdad775b6975a8108762345b2cfbf1a93c37
   GoogleDataTransport: 5fffe35792f8b96ec8d6775f5eccd83c998d5a3b
+  GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   "gRPC-C++": 9675f953ace2b3de7c506039d77be1f2e77a8db2
   gRPC-Core: 943e491cb0d45598b0b0eb9e910c88080369290b
@@ -859,6 +868,6 @@ SPEC CHECKSUMS:
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
   SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
 
-PODFILE CHECKSUM: 238c2a2fe97d76725afd3fb5a5e0ed28296f28ce
+PODFILE CHECKSUM: ec3b40cdb2f5cb2419e94d2b26b69836a7874f56
 
 COCOAPODS: 1.11.3

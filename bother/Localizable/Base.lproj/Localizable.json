@@ -58,7 +58,9 @@
                 "Already*a*member" : "Already a member? Sign In.",
                 "Sign*In" : "Sign In",
                 "Write" : "Write",
-                "Ask*help*or" : "You can ask help or give feedback."
+                "Ask*help*or" : "You can ask help or give feedback.",
+                "Read" : "Read",
+                "More" : "More"
 
 
     }
