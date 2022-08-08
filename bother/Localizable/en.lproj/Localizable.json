@@ -34,7 +34,24 @@
                 "All*Good" : "All*Good",
                 "Write*something*please" : "Write something please",
                 "Your*feedback*has*reached*us" : "Your feedback has reached us",
-                "Thanks" : "Thanks"
+                "Thanks" : "Thanks",
+                "Watch*Ad" : "Watch Ad",
+                "Write*Something" : "Write Something",
+                "Daily*Limit*Achieved" : "Daily Limit Achieved",
+                "Write*a*story*or" : "Write a bother or watch an ad for reset your daily limit.",
+                "Success" : "Success",
+                "Logged*Out" : "Logged Out",
+                "Check*your*mailbox" : "Check your mailbox for password restore mail. ",
+                "Invalid*E-mail" : "Invalid E-mail",
+                "Please*check*your*e-mail" : "Please check your e-mail adress",
+                "Something*went*wrong." : "Something went wrong.",
+                "Please*try*again*or*report*us." : "Please try again or report us.",
+                "User*Created" : "User Created",
+                "Enjoy*your*time" : "Enjoy your time",
+                "There's*no*Password." : "There's no Password.",
+                "Please*enter*one" : "Please enter one",
+                "There's*no*E-mail*address." : "There's no E-mail address.",
+                "Please*enter*one*mail" : "Please enter one"
             
 
     },

@@ -14,9 +14,6 @@ class SelectedCategoryViewController: UIViewController {
     
     
     // TODO: Can be anything without violence, sex, terrorism, etc.
-    // TODO: When create user, go to correct page with correct info.
-    // TODO: Here we can animate agreed and disagreed labels after selection, for better ui.
-    // TODO: Also this stands by with the reason, people will be effected other's answers.
     
     // MARK: - Variables
     var selectedMainCategory : Int = 0
@@ -147,21 +144,19 @@ extension SelectedCategoryViewController: UITableViewDelegate, ActionYesOrNoDele
                     if dailyBotherLimit == 1 {
                         isDailyBotherFinished = true
 
-                        // MARK: TODO Localize
                         let appearance = SCLAlertView.SCLAppearance(
                             showCloseButton: false
                         )
                         var alertView = SCLAlertView(appearance: appearance)
-                        alertView.addButton("Watch Ad") {
-                            print("Pressed")
+                        alertView.addButton("main.Watch*Ad".l10n()) {
                             self.showAd()
                         }
-                        alertView.addButton("Write Story") {
+                        alertView.addButton("main.Write*Something".l10n()) {
                             self.openWriteYourStoryPage(viewController: self)
                         }
                         
                         DispatchQueue.main.async {
-                            alertView.showCustom("Daily Limit Achieved", subTitle: "Write a story or watch an ad for reset your daily limit.", color: .green, icon: (UIImage(systemName: "shareplay")  ?? UIImage(systemName: "pencil"))!)
+                            alertView.showCustom("main.Daily*Limit*Achieved".l10n(), subTitle: "main.Write*a*story*or".l10n(), color: .green, icon: (UIImage(systemName: "shareplay")  ?? UIImage(systemName: "pencil"))!)
                         }
                     }
                     

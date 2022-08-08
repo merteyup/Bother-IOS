@@ -311,7 +311,6 @@ class BotherUser {
                                 }
                                 
                                 if (userObject["emailAllowed"] as? Bool) != nil {
-                                    //TODO: email allowed hiç bir yerde değiştirmiyoruz
                                     BotherUser.shared.setEmailAllowed(emailAllowed: userObject["emailAllowed"] as? Bool)
                                 }
                                 

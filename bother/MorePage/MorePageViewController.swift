@@ -38,9 +38,7 @@ class MorePageViewController: UIViewController {
             let firebaseAuth = Auth.auth()
             do {
                 try firebaseAuth.signOut()
-                // TODO: Localize
-                SCLAlertView().showSuccess("Success", subTitle: "Logged Out")
-                print("Signed Out")
+                SCLAlertView().showSuccess("main.Success".l10n(), subTitle: "main.Logged*Out".l10n())
             } catch let signOutError as NSError {
                 print("Error signing out: %@", signOutError)
             }
@@ -119,6 +117,20 @@ extension MorePageViewController : UITableViewDelegate {
 }
 
 extension MorePageViewController : UITableViewDataSource {
+    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // Hide row if user logged out.
+        if indexPath.row == 7 {
+            if Auth.auth().currentUser != nil {
+                return UITableView.automaticDimension
+            } else {
+                return 0
+            }
+        }
+        return UITableView.automaticDimension
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 9
     }

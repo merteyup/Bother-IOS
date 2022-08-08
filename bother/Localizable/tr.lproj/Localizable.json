@@ -34,8 +34,24 @@
                 "All*Good" : "Tamamdır",
                 "Write*something*please" : "Lütfen bir şeyler yaz"
                 "Your*feedback*has*reached*us" : "Bildirimin bize ulaştı",
-                "Thanks" : "Teşekkürler"
-                
+                "Thanks" : "Teşekkürler",
+                "Watch*Ad" : "Reklam İzle",
+                "Write*Something" : "Birşeyler Yaz",
+                "Daily*Limit*Achieved" : "Günlük Limit Doldu",
+                "Write*a*story*or" : "Write a bother or watch an ad for reset your daily limit.",
+                "Success" : "Tamamlandı",
+                "Logged*Out" : "Çıkış Yapıldı",
+                "Check*your*mailbox" : "Şifre sıfırlama bağlantısı için E-posta kutunuzu kontrol edin.",
+                "Invalid*E-mail" : "Geçersiz E-Posta",
+                "Please*check*your*e-mail" : "Lütfen E-posta adresinizi kontrol edin.",
+                "Something*went*wrong." : "Bir şeyler ters gitti",
+                "Please*try*again*or*report*us." : "Lütfen tekrar deneyin ve hatayı bize bildirin.",
+                "User*Created" : "Kullanıcı Oluşturuldu",
+                "Enjoy*your*time" : "Keyifli okumalar",
+                "There's*no*Password." : "Şifre bulunamadı.",
+                "Please*enter*one" : "Lütfen şifre girin",
+                "There's*no*E-mail*address." : "E-posta adresi bulunamadı.",
+                "Please*enter*one*mail" : "Lütfen E-posta adresi girin."
 
     },
     "storyboard":{

@@ -11,7 +11,6 @@ import FirebaseAuth
 
 class CategoryViewController: UIViewController {
     
-    // TODO: Work on main categories.
     
     // MARK: - Variables
     lazy var functions = Functions.functions();
@@ -24,6 +23,8 @@ class CategoryViewController: UIViewController {
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // TODO: ADD DELETE STORY FUNCTION IN SECOND VERSION
         
      /*
       if let currentUser = Auth.auth().currentUser?.uid {
@@ -43,31 +44,6 @@ class CategoryViewController: UIViewController {
            }
       */
              
-     
-        
-   
-        
-        /*
-        
-        if let currentUser = Auth.auth().currentUser?.uid {
-            var parameters = ["firebaseUID" : currentUser] as [String : Any]
-            functions.httpsCallable("getUserInfoCloud").call(parameters){ (result, error) in
-                if error == nil{
-                    print("FuncWorked :\(result?.data)")
-                    if let firstArray = result?.data as? NSArray{
-                        //   self.spliceArrayAndGetOneListing(array : firstArray)
-                    }
-                } else {
-                    print("FuncWorkedNo")
-                    //  SCLAlertView().showError("main.Error".l10n(), subTitle: "main.Please*try*again".l10n())
-                }
-            }
-        }
-        */
-        
-        
-        
- 
         
     }
     

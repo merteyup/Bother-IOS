@@ -65,11 +65,10 @@ extension SignInViewController : SignInPageCell1Delegate {
             if let email = cell.emailSignIn.text {
                 if email.isValidEmail {
                     Auth.auth().sendPasswordReset(withEmail: email) { error in
-                    // TODO: Localize
-                    SCLAlertView().showInfo("Check your mailbox for password restore mail. ", subTitle: "You are great")
+                        SCLAlertView().showInfo("main.Check*your*mailbox".l10n(), subTitle: "")
                     }
                 } else {
-                    SCLAlertView().showInfo("Invalid E-mail", subTitle: "Please check your e-mail adress ")
+                    SCLAlertView().showInfo("main.Invalid*E-mail".l10n(), subTitle: "main.Please*check*your*e-mail".l10n())
                 }
             }
         }
@@ -95,8 +94,7 @@ extension SignInViewController : SignInPageCell1Delegate {
                                         self!.dismissMultipleViewControllers()
                                     }
                                 } else {
-                                    // TODO: Localization
-                                    SCLAlertView().showError("Something went wrong.", subTitle: "Please try again or report us.")
+                                    SCLAlertView().showError("main.Something*went*wrong.".l10n(), subTitle: "main.Please*try*again*or*report*us.".l10n())
                                 }
                             }
                         }

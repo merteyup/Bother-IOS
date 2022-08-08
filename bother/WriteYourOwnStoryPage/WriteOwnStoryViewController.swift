@@ -10,7 +10,6 @@ import FirebaseAuth
 import FirebaseFunctions
 
 
-// TODO: Back button should be fade in for users which will not sign in.
 
 protocol WriteOwnStoryViewControllerDelegate : AnyObject {
     func newStorySendPressed()
@@ -93,8 +92,6 @@ extension WriteOwnStoryViewController: WriteYourOwnStoryCellDelegate {
     func sendPressed(bother: Bother) {
         // TODO: Here we should reload tableview data, and send user back to the selectedcategoryviewcontroller with new array from database.
         self.dismiss(animated: true) {
-            
-
             self.createStoryCloud(bother: bother)
             BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: 10)
             botherArray = loremIpsum.components(separatedBy: ["!", ".", "?"])

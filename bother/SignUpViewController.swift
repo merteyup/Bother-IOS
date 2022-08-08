@@ -75,9 +75,8 @@ class SignUpViewController: UIViewController {
             BotherUser.shared.setSessionBotherLimit(sessionBotherLimit: 30)
             BotherUser.shared.setUserRole(userRole: 2)
             BotherUser.createUpdateUser { result in
-                // TODO: Localize
                 self.dismiss(animated: true) {
-                    SCLAlertView().showSuccess("User Created", subTitle: "Enjoy your time", closeButtonTitle: "Done").setDismissBlock {
+                    SCLAlertView().showSuccess("main.User*Created".l10n(), subTitle: "main.Enjoy*your*time".l10n(), closeButtonTitle: "Done").setDismissBlock {
                         DispatchQueue.main.async {
                             self.dismiss(animated: true,completion: {
                                 self.presentingViewController?.dismiss(animated: true)
@@ -88,8 +87,10 @@ class SignUpViewController: UIViewController {
                 }
             }
         } else {
-            // TODO: Alert
-            print ("Error: User Not Created")
+            
+            DispatchQueue.main.async {
+                SCLAlertView().showError("main.Something*went*wrong.".l10n(), subTitle: "main.Please*try*again*or*report*us.".l10n())
+            }
         }
     }
 }
@@ -131,11 +132,10 @@ extension SignUpViewController: SignUpPageCell1Delegate {
                         self.createUpdateUserObject()
                     }
                 } else {
-                    // TODO: Add Alertview in here.
-                    SCLAlertView().showError("There's no Password.", subTitle: "Please enter one")
+                    SCLAlertView().showError("main.There's*no*Password.".l10n(), subTitle: "main.Please*enter*one".l10n())
                 }
             } else {
-                SCLAlertView().showError("There's no E-mail address.", subTitle: "Please enter one")
+                SCLAlertView().showError("main.There's*no*E-mail*address.".l10n(), subTitle: "main.Please*enter*one*mail".l10n())
             }
         }
     }
