@@ -35,7 +35,11 @@ class SelectedCategoryViewController: UIViewController {
     
     
     @IBAction func actionWrite(_ sender: Any) {
-        openWriteYourStoryPage(viewController: nil)
+        if Auth.auth().currentUser != nil {
+            openWriteYourStoryPage(viewController: nil)
+        } else {
+            openSignInViewController(selectedMainCategory: selectedMainCategory)
+        }
     }
     
     

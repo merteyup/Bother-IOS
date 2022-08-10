@@ -51,7 +51,8 @@
                 "There's*no*Password." : "Şifre bulunamadı.",
                 "Please*enter*one" : "Lütfen şifre girin",
                 "There's*no*E-mail*address." : "E-posta adresi bulunamadı.",
-                "Please*enter*one*mail" : "Lütfen E-posta adresi girin."
+                "Please*enter*one*mail" : "Lütfen E-posta adresi girin.",
+                "Share" : "Paylaş"
 
     },
     "storyboard":{

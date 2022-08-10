@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA1FBB1E5D294F2CD0F42D54 /* Pods_bother.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36C5B525F90288A9F3747A4 /* Pods_bother.framework */; };
 		C40290CE2888871100E3621F /* Localizable.json in Resources */ = {isa = PBXBuildFile; fileRef = C40290D02888871100E3621F /* Localizable.json */; };
+		C45A667928A4566400D2C2A0 /* HowItWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A667828A4566400D2C2A0 /* HowItWorkViewController.swift */; };
 		C45CD59F2884B0B900760438 /* SignInPageCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD58C2884B0B500760438 /* SignInPageCell1.swift */; };
 		C45CD5A02884B0B900760438 /* MySubclassedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD58D2884B0B500760438 /* MySubclassedTabBarController.swift */; };
 		C45CD5A12884B0B900760438 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD58E2884B0B500760438 /* GlobalVariables.swift */; };
@@ -47,6 +48,7 @@
 		C40290CF2888871100E3621F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Localizable.json; sourceTree = "<group>"; };
 		C40290D12888871A00E3621F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Localizable.json; sourceTree = "<group>"; };
 		C40290D22888871D00E3621F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tr; path = tr.lproj/Localizable.json; sourceTree = "<group>"; };
+		C45A667828A4566400D2C2A0 /* HowItWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorkViewController.swift; sourceTree = "<group>"; };
 		C45CD58C2884B0B500760438 /* SignInPageCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInPageCell1.swift; sourceTree = "<group>"; };
 		C45CD58D2884B0B500760438 /* MySubclassedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySubclassedTabBarController.swift; sourceTree = "<group>"; };
 		C45CD58E2884B0B500760438 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		C40290D828888E7A00E3621F /* MorePage */ = {
 			isa = PBXGroup;
 			children = (
+				C45A667728A4563900D2C2A0 /* HowItWork */,
 				C45CD5992884B0B800760438 /* MorePageViewController.swift */,
 			);
 			path = MorePage;
@@ -203,6 +206,15 @@
 				C4DF5E0528876BEA00E50813 /* SelectLanguageViewController.swift */,
 			);
 			path = LanguagePage;
+			sourceTree = "<group>";
+		};
+		C45A667728A4563900D2C2A0 /* HowItWork */ = {
+			isa = PBXGroup;
+			children = (
+				C45A667828A4566400D2C2A0 /* HowItWorkViewController.swift */,
+			);
+			name = HowItWork;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C4CD0B782884AD7000F4667F = {
@@ -416,6 +428,7 @@
 				C45CD5AA2884B0B900760438 /* SignInViewController.swift in Sources */,
 				C45CD5A62884B0B900760438 /* CategoryTableViewCell.swift in Sources */,
 				C4DF5E04288739DD00E50813 /* WriteYourOwnStoryCell.swift in Sources */,
+				C45A667928A4566400D2C2A0 /* HowItWorkViewController.swift in Sources */,
 				C45CD5A82884B0B900760438 /* ButtonBackground.swift in Sources */,
 				C45CD5A42884B0B900760438 /* BotherUser.swift in Sources */,
 				C45CD5AC2884B0B900760438 /* MorePageViewController.swift in Sources */,

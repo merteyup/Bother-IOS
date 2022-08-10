@@ -71,6 +71,20 @@ extension UIViewController {
         self.present(vc, animated: true, completion: nil);
     }
     
+    func openHowItWorkViewController(){
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc: HowItWorkViewController = storyboard.instantiateViewController(withIdentifier: "HowItWorkViewControllerID") as! HowItWorkViewController;
+        
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        vc.modalPresentationStyle = .currentContext;
+        
+        self.present(vc, animated: true, completion: nil);
+    }
+    
+    
+    
+    
     func openSignInViewController(selectedMainCategory: Int){
         
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);

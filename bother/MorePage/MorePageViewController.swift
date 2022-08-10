@@ -18,6 +18,7 @@ class MorePageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("CurrentUser: \(Auth.auth().currentUser?.email)")
         // Do any additional setup after loading the view.
     }
     
@@ -83,28 +84,44 @@ extension MorePageViewController : UITableViewDelegate {
             openSignUpViewController(selectedMainCategory: 0)
             
         } else if indexPath.row == 1 {
+            // TODO: Change this app link with correct and live one.
+            if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
+              let objectsToShare = [name]
+              let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+              self.present(activityVC, animated: true, completion: nil)
+            } else {
+              // show alert for not available
+            }
             
         } else if indexPath.row == 2 {
             
+            openHowItWorkViewController()
+            
         } else if indexPath.row == 3 {
             
+            
+            if let url = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(url)
+            }
         } else if indexPath.row == 4 {
             
+
         } else if indexPath.row == 5 {
             
             openHelpViewController()
-            
+
         } else if indexPath.row == 6 {
-            
+
             openSelectLanguageViewController()
-            
+
         } else if indexPath.row == 7 {
-            
             showAlertView()
+
             
         } else if indexPath.row == 8 {
-            
-        }/* else if indexPath.row == 9 {
+
+        }
+        /* else if indexPath.row == 9 {
           //  openBuyMeCoffeePage()
         }
         */
@@ -121,7 +138,7 @@ extension MorePageViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         // Hide row if user logged out.
-        if indexPath.row == 7 {
+        if indexPath.row == 8 {
             if Auth.auth().currentUser != nil {
                 return UITableView.automaticDimension
             } else {
@@ -132,7 +149,7 @@ extension MorePageViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -143,9 +160,9 @@ extension MorePageViewController : UITableViewDataSource {
             cell.textLabel?.text = "main.Sign*Up".l10n()
             cell.imageView?.image = UIImage(systemName: "person.2.wave.2")
         } else if indexPath.row == 1 {
-            cell.textLabel?.text = "main.Premium".l10n()
-            cell.imageView?.image = UIImage(systemName: "star.circle")
-        } else if indexPath.row == 2 {
+            cell.textLabel?.text = "main.Share".l10n()
+            cell.imageView?.image = UIImage(systemName: "square.and.arrow.up")
+        }  else if indexPath.row == 2 {
             cell.textLabel?.text = "main.How*it*Works?".l10n()
             cell.imageView?.image = UIImage(systemName: "questionmark.video")
         }  else if indexPath.row == 3 {
