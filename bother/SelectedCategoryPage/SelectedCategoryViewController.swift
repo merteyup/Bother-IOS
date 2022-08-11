@@ -13,6 +13,8 @@ import GoogleMobileAds
 class SelectedCategoryViewController: UIViewController {
     
     
+    // TODO: Change Language Doesn't work.
+    
     // TODO: Can be anything without violence, sex, terrorism, etc.
     
     // MARK: - Variables

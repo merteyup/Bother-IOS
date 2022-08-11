@@ -52,7 +52,13 @@
                 "Please*enter*one" : "Lütfen şifre girin",
                 "There's*no*E-mail*address." : "E-posta adresi bulunamadı.",
                 "Please*enter*one*mail" : "Lütfen E-posta adresi girin.",
-                "Share" : "Paylaş"
+                "Share" : "Paylaş",
+                "We*were*all*bothered." : "Hepimiz rahatsız edildik. ",
+                "Mostly*with*tiny*things." : "Çoğunlukla da küçük şeylerle.",
+                "And*we*did*nothing." : "Ve hiçbir şey yapmadık.",
+                "Not*even*thought" : "Düşünmedik bile.",
+                "Here's*a*place*to*share." : "İşte paylaşmak için bir ortam.",
+                "At*least*see*how*many" : "Kaç kişinin aynı duyguyu paylaştığını görmek için bile değer."
 
     },
     "storyboard":{
@@ -70,7 +76,8 @@
                 "Write" : "Yaz",
                 "Ask*help*or" : "Yardım isteyebilir ya da fikirlerini iletebilirsin.",
                 "Read" : "Oku",
-                "More" : "Ayarlar"
+                "More" : "Ayarlar",
+                "Next" : "İleri"
 
                 
 

@@ -29,6 +29,11 @@
 		C45CD5B02884B0B900760438 /* SelectedCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD59D2884B0B900760438 /* SelectedCategoryTableViewCell.swift */; };
 		C45CD5B12884B0B900760438 /* SignUpPageCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD59E2884B0B900760438 /* SignUpPageCell1.swift */; };
 		C46B5C172889EAED00E19EF9 /* Bother.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B5C162889EAED00E19EF9 /* Bother.swift */; };
+		C475F24828A5A11100C8480C /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F24728A5A11100C8480C /* coffee.json */; };
+		C475F25028A5A93700C8480C /* thinking.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F24B28A5A93600C8480C /* thinking.json */; };
+		C475F25128A5A93700C8480C /* management.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F24C28A5A93600C8480C /* management.json */; };
+		C475F25628A5AB8C00C8480C /* things-done.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F25528A5AB8C00C8480C /* things-done.json */; };
+		C475F25828A5ADCE00C8480C /* PageControlBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475F25728A5ADCE00C8480C /* PageControlBackground.swift */; };
 		C4AE9E472884AF3C0001F933 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AE9E462884AF3C0001F933 /* GoogleService-Info.plist */; };
 		C4CD0B852884AD7000F4667F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD0B842884AD7000F4667F /* AppDelegate.swift */; };
 		C4CD0B872884AD7000F4667F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD0B862884AD7000F4667F /* SceneDelegate.swift */; };
@@ -68,6 +73,11 @@
 		C45CD59D2884B0B900760438 /* SelectedCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		C45CD59E2884B0B900760438 /* SignUpPageCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPageCell1.swift; sourceTree = "<group>"; };
 		C46B5C162889EAED00E19EF9 /* Bother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bother.swift; sourceTree = "<group>"; };
+		C475F24728A5A11100C8480C /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
+		C475F24B28A5A93600C8480C /* thinking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thinking.json; sourceTree = "<group>"; };
+		C475F24C28A5A93600C8480C /* management.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = management.json; sourceTree = "<group>"; };
+		C475F25528A5AB8C00C8480C /* things-done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "things-done.json"; sourceTree = "<group>"; };
+		C475F25728A5ADCE00C8480C /* PageControlBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlBackground.swift; sourceTree = "<group>"; };
 		C4A79C1A288775D3002F6B59 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		C4A79C1B288775D3002F6B59 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C4AE9E462884AF3C0001F933 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -132,6 +142,7 @@
 				C45CD5952884B0B700760438 /* ButtonBackground.swift */,
 				C45CD58F2884B0B600760438 /* SMButtonBackground.swift */,
 				C4DF5E01288734B800E50813 /* ViewBackgroundFWriteStory.swift */,
+				C475F25728A5ADCE00C8480C /* PageControlBackground.swift */,
 			);
 			path = CustomizeUI;
 			sourceTree = "<group>";
@@ -238,6 +249,10 @@
 		C4CD0B832884AD7000F4667F /* bother */ = {
 			isa = PBXGroup;
 			children = (
+				C475F24728A5A11100C8480C /* coffee.json */,
+				C475F25528A5AB8C00C8480C /* things-done.json */,
+				C475F24C28A5A93600C8480C /* management.json */,
+				C475F24B28A5A93600C8480C /* thinking.json */,
 				C4DF5E0728876E4A00E50813 /* Localizable */,
 				C4CD0B842884AD7000F4667F /* AppDelegate.swift */,
 				C4CD0B862884AD7000F4667F /* SceneDelegate.swift */,
@@ -351,8 +366,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4CD0B912884AD7100F4667F /* LaunchScreen.storyboard in Resources */,
+				C475F25028A5A93700C8480C /* thinking.json in Resources */,
+				C475F25628A5AB8C00C8480C /* things-done.json in Resources */,
+				C475F25128A5A93700C8480C /* management.json in Resources */,
 				C40290CE2888871100E3621F /* Localizable.json in Resources */,
 				C4AE9E472884AF3C0001F933 /* GoogleService-Info.plist in Resources */,
+				C475F24828A5A11100C8480C /* coffee.json in Resources */,
 				C4CD0B8E2884AD7100F4667F /* Assets.xcassets in Resources */,
 				C4CD0B8C2884AD7000F4667F /* Main.storyboard in Resources */,
 			);
@@ -431,6 +450,7 @@
 				C45A667928A4566400D2C2A0 /* HowItWorkViewController.swift in Sources */,
 				C45CD5A82884B0B900760438 /* ButtonBackground.swift in Sources */,
 				C45CD5A42884B0B900760438 /* BotherUser.swift in Sources */,
+				C475F25828A5ADCE00C8480C /* PageControlBackground.swift in Sources */,
 				C45CD5AC2884B0B900760438 /* MorePageViewController.swift in Sources */,
 				C4CD0B872884AD7000F4667F /* SceneDelegate.swift in Sources */,
 				C45CD5A32884B0B900760438 /* DailyLimitAchievedTableViewCell.swift in Sources */,

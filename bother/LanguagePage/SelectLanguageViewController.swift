@@ -34,7 +34,6 @@ class SelectLanguageViewController: UIViewController {
                     
                     vc.modalPresentationCapturesStatusBarAppearance = true
                     vc.modalPresentationStyle = .overFullScreen;
-                    
                     self.present(vc, animated: false, completion: nil);
             }
         }
@@ -60,6 +59,7 @@ extension SelectLanguageViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let newLanguage = languagesCodes[indexPath.row];
 
+        print(newLanguage)
         L10n.shared.language = newLanguage
         changeLanguageTo(newLanguage: newLanguage)
 

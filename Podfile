@@ -13,8 +13,10 @@ target 'bother' do
   pod 'FirebaseFunctions', '~> 9.3'
   pod 'SCLAlertView'
   pod 'IQKeyboardManagerSwift'
-  pod 'L10n-swift', '~> 5.10'
+  pod 'L10n-swift', '~> 5.10.2'
   pod 'Google-Mobile-Ads-SDK'
+  pod 'lottie-ios'
+
 
 
 end

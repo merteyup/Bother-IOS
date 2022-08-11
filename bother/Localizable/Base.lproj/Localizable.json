@@ -52,7 +52,13 @@
                 "Please*enter*one" : "Please enter one",
                 "There's*no*E-mail*address." : "There's no E-mail address.",
                 "Please*enter*one*mail" : "Please enter one",
-                "Share" : "Share"
+                "Share" : "Share",
+                "We*were*all*bothered." : "We were all bothered. ",
+                "Mostly*with*tiny*things." : "Mostly with tiny things.",
+                "And*we*did*nothing." : "And we did nothing.",
+                "Not*even*thought" : "Not even thought about it.",
+                "Here's*a*place*to*share." : "Here's a place to share.",
+                "At*least*see*how*many" : "At least see how many people share the same feeling."
 
 
                 
@@ -78,7 +84,8 @@
                 "Write" : "Write",
                 "Ask*help*or" : "You can ask help or give feedback.",
                 "Read" : "Read",
-                "More" : "More"
+                "More" : "More",
+                "Next" : "Next"
 
 
     }
