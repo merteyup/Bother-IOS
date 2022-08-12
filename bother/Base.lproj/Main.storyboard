@@ -396,7 +396,7 @@
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="gfd-Tn-RNz" customClass="PageControlBackground" customModule="bother" customModuleProvider="target">
                                 <rect key="frame" x="80" y="733" width="254" height="26"/>
-                                <color key="backgroundColor" red="0.1803921568627451" green="0.51764705882352935" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.57647058819999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="254" id="cJC-PX-5ns"/>
@@ -420,9 +420,9 @@
                                     <action selector="actionEnable:" destination="djy-lI-Jcg" eventType="touchUpInside" id="0rG-bO-zxf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-6D-3my" customClass="ButtonBackground" customModule="bother" customModuleProvider="target">
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg4-6D-3my" customClass="ButtonBackground" customModule="bother" customModuleProvider="target">
                                 <rect key="frame" x="263" y="780" width="131" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.57647058823529407" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="131" id="URe-42-Xgu"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="qCZ-UV-wzy"/>

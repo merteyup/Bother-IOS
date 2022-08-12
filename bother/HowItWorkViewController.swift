@@ -21,7 +21,7 @@ class HowItWorkViewController: UIViewController, UIScrollViewDelegate {
                  "main.Not*even*thought".l10n(),
                  "main.At*least*see*how*many".l10n()]
     var imgs = ["Break-in-Alert-1","Break-in-Alert-2","Break-in-Alert-3"]
-    var anims = ["management","thinking","things-done"]
+    var anims = ["problem","thinking","solved"]
 
     var lastPage = 0
     private var animationView: AnimationView?

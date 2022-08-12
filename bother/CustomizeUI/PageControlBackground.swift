@@ -27,6 +27,7 @@ class PageControlBackground: UIPageControl {
         layer.shadowOpacity = 0.3
         layer.shadowOffset = CGSize(width: 1, height: 1)
         layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        layer.opacity = 0.5
         
     }
 }
