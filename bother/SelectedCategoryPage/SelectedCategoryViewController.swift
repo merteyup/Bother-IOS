@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 import SCLAlertView
 import GoogleMobileAds
+import L10n_swift
+
 
 class SelectedCategoryViewController: UIViewController {
     

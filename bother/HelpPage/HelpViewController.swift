@@ -9,6 +9,7 @@ import UIKit
 import FirebaseFunctions
 import FirebaseAuth
 import SCLAlertView
+import L10n_swift
 
 class HelpViewController: UIViewController {
 

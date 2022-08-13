@@ -9,6 +9,7 @@ import UIKit
 import FirebaseCore
 import IQKeyboardManagerSwift
 import GoogleMobileAds
+import L10n_swift
 
 
 @main

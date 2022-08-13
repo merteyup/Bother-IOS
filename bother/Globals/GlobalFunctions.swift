@@ -122,6 +122,19 @@ extension UIViewController {
         self.present(vc, animated: true, completion: nil);
     }
     
+    func openTermsOfUsageViewController() {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+        let vc: TermsOfUsageViewController = storyboard.instantiateViewController(withIdentifier: "TermsOfUsageViewControllerID") as! TermsOfUsageViewController;
+        
+        vc.modalPresentationCapturesStatusBarAppearance = true
+        vc.modalPresentationStyle = .overFullScreen;
+        
+        self.present(vc, animated: true, completion: nil);
+    }
+    
+    
+    
     
     func openBuyMeCoffeePage() {
         

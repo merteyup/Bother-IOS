@@ -9,6 +9,7 @@ import UIKit
 import SCLAlertView
 import FirebaseAuth
 import FirebaseCore
+import L10n_swift
 
 
 class SignInViewController: UIViewController {

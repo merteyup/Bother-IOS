@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import SCLAlertView
+import L10n_swift
 
 
 class SignUpViewController: UIViewController {

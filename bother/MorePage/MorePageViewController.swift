@@ -8,33 +8,25 @@
 import UIKit
 import FirebaseAuth
 import SCLAlertView
+import L10n_swift
 
 class MorePageViewController: UIViewController {
     
     
-    
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    
+    // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         print("CurrentUser: \(Auth.auth().currentUser?.email)")
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
-    
-     func logOut() {
+    // MARK: - Functions
+    func logOut() {
         if Auth.auth().currentUser != nil {
             let firebaseAuth = Auth.auth()
             do {
@@ -52,29 +44,33 @@ class MorePageViewController: UIViewController {
         DispatchQueue.main.async {
             // Create the alert controller
             let alertController = UIAlertController(title: "main.Are*You*Sure".l10n(), message: "main.Do*you*want*to".l10n(), preferredStyle: .alert)
-
-                 // Create the actions
-                let okAction = UIAlertAction(title: "Yes", style: .destructive) {
-                     UIAlertAction in
-                    self.logOut()
-                 }
-                let cancelAction = UIAlertAction(title: "No", style: .default) {
-                     UIAlertAction in
-
-                }
-
-                 // Add the actions
-                 alertController.addAction(okAction)
-                 alertController.addAction(cancelAction)
-
-                 // Present the controller
-                 self.present(alertController, animated: true, completion: nil)
+            
+            // Create the actions
+            let okAction = UIAlertAction(title: "Yes", style: .destructive) {
+                UIAlertAction in
+                self.logOut()
+            }
+            let cancelAction = UIAlertAction(title: "No", style: .default) {
+                UIAlertAction in
+                
+            }
+            
+            // Add the actions
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            
+            // Present the controller
+            self.present(alertController, animated: true, completion: nil)
         }
+        
+        
+    }
     
-
 }
 
-}
+
+
+// MARK: - Extension
 extension MorePageViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -86,11 +82,11 @@ extension MorePageViewController : UITableViewDelegate {
         } else if indexPath.row == 1 {
             // TODO: Change this app link with correct and live one.
             if let name = URL(string: "https://itunes.apple.com/us/app/myapp/idxxxxxxxx?ls=1&mt=8"), !name.absoluteString.isEmpty {
-              let objectsToShare = [name]
-              let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
-              self.present(activityVC, animated: true, completion: nil)
+                let objectsToShare = [name]
+                let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+                self.present(activityVC, animated: true, completion: nil)
             } else {
-              // show alert for not available
+                // show alert for not available
             }
             
         } else if indexPath.row == 2 {
@@ -98,33 +94,32 @@ extension MorePageViewController : UITableViewDelegate {
             openHowItWorkViewController()
             
         } else if indexPath.row == 3 {
-            
-            
             if let url = URL(string: UIApplication.openSettingsURLString) {
                 UIApplication.shared.open(url)
             }
         } else if indexPath.row == 4 {
             
-
+            openTermsOfUsageViewController()
+            
         } else if indexPath.row == 5 {
             
             openHelpViewController()
-
+            
         } else if indexPath.row == 6 {
-
+            
             openSelectLanguageViewController()
-
+            
         } else if indexPath.row == 7 {
+            
             showAlertView()
-
             
         } else if indexPath.row == 8 {
-
+            
         }
         /* else if indexPath.row == 9 {
-          //  openBuyMeCoffeePage()
-        }
-        */
+         //  openBuyMeCoffeePage()
+         }
+         */
         
         
         
@@ -137,7 +132,14 @@ extension MorePageViewController : UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        // Hide row if user logged out.
+        // Hide rows if user logged out.
+        if indexPath.row == 7 {
+            if Auth.auth().currentUser != nil {
+                return UITableView.automaticDimension
+            } else {
+                return 0
+            }
+        }
         if indexPath.row == 8 {
             if Auth.auth().currentUser != nil {
                 return UITableView.automaticDimension
@@ -149,7 +151,7 @@ extension MorePageViewController : UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 9
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -184,8 +186,8 @@ extension MorePageViewController : UITableViewDataSource {
             cell.textLabel?.text = "main.Delete*Account".l10n()
             cell.imageView?.image = UIImage(systemName: "trash")
         } /* else if indexPath.row == 9 {
-            cell.textLabel?.text = "main.Buy*me*coffee".l10n()
-        } */
+           cell.textLabel?.text = "main.Buy*me*coffee".l10n()
+           } */
         return cell
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import Lottie
+import L10n_swift
 
 class HowItWorkViewController: UIViewController, UIScrollViewDelegate {
     

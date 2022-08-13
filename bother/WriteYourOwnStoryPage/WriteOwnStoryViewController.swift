@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFunctions
+import L10n_swift
 
 
 

@@ -8,6 +8,8 @@
 import UIKit
 import FirebaseFunctions
 import FirebaseAuth
+import L10n_swift
+
 
 class CategoryViewController: UIViewController {
     
@@ -25,7 +27,13 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         
         // TODO: ADD DELETE STORY FUNCTION IN SECOND VERSION
+        L10n.supportedLanguages
+        L10n.preferredLanguage
         
+        
+        print("FuncWorked :\(L10n.supportedLanguages)")
+        print("FuncWorked :\(L10n.preferredLanguage)")
+
      /*
       if let currentUser = Auth.auth().currentUser?.uid {
                var parameters = ["docId" : "5S9WoQYrvU3Lf9N0yEqf"]

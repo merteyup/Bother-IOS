@@ -35,6 +35,7 @@
 		C475F25D28A6F30A00C8480C /* time.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F25C28A6F30A00C8480C /* time.json */; };
 		C475F25F28A6F4A600C8480C /* problem.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F25E28A6F4A600C8480C /* problem.json */; };
 		C475F26128A6F60E00C8480C /* solved.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F26028A6F60E00C8480C /* solved.json */; };
+		C475F26428A7BE9600C8480C /* TermsOfUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475F26328A7BE9600C8480C /* TermsOfUsageViewController.swift */; };
 		C4AE9E472884AF3C0001F933 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AE9E462884AF3C0001F933 /* GoogleService-Info.plist */; };
 		C4CD0B852884AD7000F4667F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD0B842884AD7000F4667F /* AppDelegate.swift */; };
 		C4CD0B872884AD7000F4667F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD0B862884AD7000F4667F /* SceneDelegate.swift */; };
@@ -80,6 +81,7 @@
 		C475F25C28A6F30A00C8480C /* time.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = time.json; sourceTree = "<group>"; };
 		C475F25E28A6F4A600C8480C /* problem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = problem.json; sourceTree = "<group>"; };
 		C475F26028A6F60E00C8480C /* solved.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = solved.json; sourceTree = "<group>"; };
+		C475F26328A7BE9600C8480C /* TermsOfUsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUsageViewController.swift; sourceTree = "<group>"; };
 		C4A79C1A288775D3002F6B59 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		C4A79C1B288775D3002F6B59 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		C4AE9E462884AF3C0001F933 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		C40290D828888E7A00E3621F /* MorePage */ = {
 			isa = PBXGroup;
 			children = (
+				C475F26228A7BE7E00C8480C /* TermsOfUsagePage */,
 				C45A667728A4563900D2C2A0 /* HowItWork */,
 				C45CD5992884B0B800760438 /* MorePageViewController.swift */,
 			);
@@ -228,6 +231,14 @@
 			);
 			name = HowItWork;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		C475F26228A7BE7E00C8480C /* TermsOfUsagePage */ = {
+			isa = PBXGroup;
+			children = (
+				C475F26328A7BE9600C8480C /* TermsOfUsageViewController.swift */,
+			);
+			path = TermsOfUsagePage;
 			sourceTree = "<group>";
 		};
 		C4CD0B782884AD7000F4667F = {
@@ -432,6 +443,7 @@
 			files = (
 				C4DF5E0628876BEA00E50813 /* SelectLanguageViewController.swift in Sources */,
 				C46B5C172889EAED00E19EF9 /* Bother.swift in Sources */,
+				C475F26428A7BE9600C8480C /* TermsOfUsageViewController.swift in Sources */,
 				C45CD5A52884B0B900760438 /* CategoryViewController.swift in Sources */,
 				C4DF5E02288734B800E50813 /* ViewBackgroundFWriteStory.swift in Sources */,
 				C45CD5AE2884B0B900760438 /* WriteOwnStoryViewController.swift in Sources */,
