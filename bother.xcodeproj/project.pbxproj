@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		BA1FBB1E5D294F2CD0F42D54 /* Pods_bother.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E36C5B525F90288A9F3747A4 /* Pods_bother.framework */; };
 		C40290CE2888871100E3621F /* Localizable.json in Resources */ = {isa = PBXBuildFile; fileRef = C40290D02888871100E3621F /* Localizable.json */; };
+		C4565B8D28A8FC1B00F39688 /* application.json in Resources */ = {isa = PBXBuildFile; fileRef = C4565B8C28A8FC1B00F39688 /* application.json */; };
+		C4565B9328A908C000F39688 /* connect.json in Resources */ = {isa = PBXBuildFile; fileRef = C4565B9228A908C000F39688 /* connect.json */; };
+		C4565B9928A90D4000F39688 /* argue.json in Resources */ = {isa = PBXBuildFile; fileRef = C4565B9828A90D4000F39688 /* argue.json */; };
 		C45A667928A4566400D2C2A0 /* HowItWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45A667828A4566400D2C2A0 /* HowItWorkViewController.swift */; };
 		C45CD59F2884B0B900760438 /* SignInPageCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD58C2884B0B500760438 /* SignInPageCell1.swift */; };
 		C45CD5A02884B0B900760438 /* MySubclassedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD58D2884B0B500760438 /* MySubclassedTabBarController.swift */; };
@@ -29,12 +32,8 @@
 		C45CD5B02884B0B900760438 /* SelectedCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD59D2884B0B900760438 /* SelectedCategoryTableViewCell.swift */; };
 		C45CD5B12884B0B900760438 /* SignUpPageCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45CD59E2884B0B900760438 /* SignUpPageCell1.swift */; };
 		C46B5C172889EAED00E19EF9 /* Bother.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46B5C162889EAED00E19EF9 /* Bother.swift */; };
-		C475F24828A5A11100C8480C /* coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F24728A5A11100C8480C /* coffee.json */; };
 		C475F25028A5A93700C8480C /* thinking.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F24B28A5A93600C8480C /* thinking.json */; };
 		C475F25828A5ADCE00C8480C /* PageControlBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475F25728A5ADCE00C8480C /* PageControlBackground.swift */; };
-		C475F25D28A6F30A00C8480C /* time.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F25C28A6F30A00C8480C /* time.json */; };
-		C475F25F28A6F4A600C8480C /* problem.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F25E28A6F4A600C8480C /* problem.json */; };
-		C475F26128A6F60E00C8480C /* solved.json in Resources */ = {isa = PBXBuildFile; fileRef = C475F26028A6F60E00C8480C /* solved.json */; };
 		C475F26428A7BE9600C8480C /* TermsOfUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475F26328A7BE9600C8480C /* TermsOfUsageViewController.swift */; };
 		C4AE9E472884AF3C0001F933 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4AE9E462884AF3C0001F933 /* GoogleService-Info.plist */; };
 		C4CD0B852884AD7000F4667F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CD0B842884AD7000F4667F /* AppDelegate.swift */; };
@@ -55,6 +54,9 @@
 		C40290CF2888871100E3621F /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Localizable.json; sourceTree = "<group>"; };
 		C40290D12888871A00E3621F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Localizable.json; sourceTree = "<group>"; };
 		C40290D22888871D00E3621F /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = tr; path = tr.lproj/Localizable.json; sourceTree = "<group>"; };
+		C4565B8C28A8FC1B00F39688 /* application.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = application.json; sourceTree = "<group>"; };
+		C4565B9228A908C000F39688 /* connect.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = connect.json; sourceTree = "<group>"; };
+		C4565B9828A90D4000F39688 /* argue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = argue.json; sourceTree = "<group>"; };
 		C45A667828A4566400D2C2A0 /* HowItWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorkViewController.swift; sourceTree = "<group>"; };
 		C45CD58C2884B0B500760438 /* SignInPageCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInPageCell1.swift; sourceTree = "<group>"; };
 		C45CD58D2884B0B500760438 /* MySubclassedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySubclassedTabBarController.swift; sourceTree = "<group>"; };
@@ -75,12 +77,8 @@
 		C45CD59D2884B0B900760438 /* SelectedCategoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		C45CD59E2884B0B900760438 /* SignUpPageCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPageCell1.swift; sourceTree = "<group>"; };
 		C46B5C162889EAED00E19EF9 /* Bother.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bother.swift; sourceTree = "<group>"; };
-		C475F24728A5A11100C8480C /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
 		C475F24B28A5A93600C8480C /* thinking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thinking.json; sourceTree = "<group>"; };
 		C475F25728A5ADCE00C8480C /* PageControlBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlBackground.swift; sourceTree = "<group>"; };
-		C475F25C28A6F30A00C8480C /* time.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = time.json; sourceTree = "<group>"; };
-		C475F25E28A6F4A600C8480C /* problem.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = problem.json; sourceTree = "<group>"; };
-		C475F26028A6F60E00C8480C /* solved.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = solved.json; sourceTree = "<group>"; };
 		C475F26328A7BE9600C8480C /* TermsOfUsageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUsageViewController.swift; sourceTree = "<group>"; };
 		C4A79C1A288775D3002F6B59 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
 		C4A79C1B288775D3002F6B59 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -262,11 +260,10 @@
 		C4CD0B832884AD7000F4667F /* bother */ = {
 			isa = PBXGroup;
 			children = (
-				C475F24728A5A11100C8480C /* coffee.json */,
-				C475F25E28A6F4A600C8480C /* problem.json */,
-				C475F25C28A6F30A00C8480C /* time.json */,
+				C4565B9228A908C000F39688 /* connect.json */,
+				C4565B9828A90D4000F39688 /* argue.json */,
 				C475F24B28A5A93600C8480C /* thinking.json */,
-				C475F26028A6F60E00C8480C /* solved.json */,
+				C4565B8C28A8FC1B00F39688 /* application.json */,
 				C4DF5E0728876E4A00E50813 /* Localizable */,
 				C4CD0B842884AD7000F4667F /* AppDelegate.swift */,
 				C4CD0B862884AD7000F4667F /* SceneDelegate.swift */,
@@ -381,14 +378,13 @@
 			files = (
 				C4CD0B912884AD7100F4667F /* LaunchScreen.storyboard in Resources */,
 				C475F25028A5A93700C8480C /* thinking.json in Resources */,
-				C475F26128A6F60E00C8480C /* solved.json in Resources */,
-				C475F25D28A6F30A00C8480C /* time.json in Resources */,
-				C475F25F28A6F4A600C8480C /* problem.json in Resources */,
+				C4565B9328A908C000F39688 /* connect.json in Resources */,
 				C40290CE2888871100E3621F /* Localizable.json in Resources */,
+				C4565B9928A90D4000F39688 /* argue.json in Resources */,
 				C4AE9E472884AF3C0001F933 /* GoogleService-Info.plist in Resources */,
-				C475F24828A5A11100C8480C /* coffee.json in Resources */,
 				C4CD0B8E2884AD7100F4667F /* Assets.xcassets in Resources */,
 				C4CD0B8C2884AD7000F4667F /* Main.storyboard in Resources */,
+				C4565B8D28A8FC1B00F39688 /* application.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

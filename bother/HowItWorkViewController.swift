@@ -17,12 +17,15 @@ class HowItWorkViewController: UIViewController, UIScrollViewDelegate {
     //data for the slides
     var titles = ["main.We*were*all*bothered.".l10n(),
                   "main.And*we*did*nothing.".l10n(),
-                  "main.Here's*a*place*to*share.".l10n()]
+                  "main.Here's*a*place*to*share.".l10n(),
+                  "main.Read*write*connect".l10n()]
+    
     var descs = ["main.Mostly*with*tiny*things.".l10n(),
                  "main.Not*even*thought".l10n(),
-                 "main.At*least*see*how*many".l10n()]
-    var imgs = ["Break-in-Alert-1","Break-in-Alert-2","Break-in-Alert-3"]
-    var anims = ["problem","thinking","solved"]
+                 "main.At*least*see*how*many".l10n(),
+                 "main.Everyone*has*problems.".l10n()]
+    
+    var anims = ["argue","thinking","application","connect"]
 
     var lastPage = 0
     private var animationView: AnimationView?
@@ -39,7 +42,7 @@ class HowItWorkViewController: UIViewController, UIScrollViewDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super .viewWillAppear(true)
-        lastPage = imgs.count
+        lastPage = anims.count
        
     }
 
@@ -92,9 +95,7 @@ class HowItWorkViewController: UIViewController, UIScrollViewDelegate {
                 let slide = UIView(frame: frame)
                 //subviews
                 
-                let imageView = UIImageView.init(image: UIImage.init(named: imgs[index]))
-                imageView.frame = CGRect(x:0,y:0,width:300,height:300)
-                imageView.contentMode = .scaleAspectFit
+            
                 
                   animationView = .init(name: anims[index])
                   animationView!.frame = CGRect(x:0,y:0,width:300,height:300)
