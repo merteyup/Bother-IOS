@@ -59,6 +59,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    // TODO: Here's a wrong alert showing.
     // MARK: - Functions
     func createUpdateUserObject() {
         if let user = Auth.auth().currentUser {
