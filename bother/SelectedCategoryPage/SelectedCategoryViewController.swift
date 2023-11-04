@@ -164,7 +164,7 @@ extension SelectedCategoryViewController: UITableViewDelegate, ActionYesOrNoDele
                         }
                         
                         DispatchQueue.main.async {
-                            alertView.showCustom("main.Daily*Limit*Achieved".l10n(), subTitle: "main.Write*a*story*or".l10n(), color: .green, icon: (UIImage(systemName: "shareplay")  ?? UIImage(systemName: "pencil"))!)
+                            alertView.showCustom("main.Daily*Limit*Achieved".l10n(), subTitle: "main.Write*a*story*or".l10n(), color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1), icon: (UIImage(systemName: "shareplay")  ?? UIImage(systemName: "pencil"))!)
                         }
                     }
                     
