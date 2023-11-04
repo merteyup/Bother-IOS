@@ -55,7 +55,6 @@ class WriteOwnStoryViewController: UIViewController {
                 functions.httpsCallable("createStoryCloud").call(parameters){ (result, error) in
                     if error == nil{
                         
-                        print("FuncWorked :\(result?.data)")
                         if let firstArray = result?.data as? NSArray{
                             //   self.spliceArrayAndGetOneListing(array : firstArray)
                         }
