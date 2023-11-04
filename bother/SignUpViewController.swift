@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    // TODO: Here's a wrong alert showing.
+    // TODO: In here somehow it goes into showing error alert. But user is logged in.
     // MARK: - Functions
     func createUpdateUserObject() {
         if let user = Auth.auth().currentUser {
