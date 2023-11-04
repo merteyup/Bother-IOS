@@ -1,8 +1,8 @@
 {
     "main": {
-        "Back": "Back",
-        "Save": "Save",
-        "Done": "Done",
+        "Back": "Geri",
+        "Save": "Kaydet",
+        "Done": "Tamam",
         "Technology": "Teknoloji",
         "Health": "Sağlık",
         "Daily*Life": "Günlük Hayat",
@@ -36,9 +36,9 @@
         "Your*feedback*has*reached*us": "Bildirimin bize ulaştı",
         "Thanks": "Teşekkürler",
         "Watch*Ad": "Reklam İzle",
-        "Write*Something": "Birşeyler Yaz",
+        "Write*Something": "Bir şeyler Yaz",
         "Daily*Limit*Achieved": "Günlük Limit Doldu",
-        "Write*a*story*or": "Write a bother or watch an ad for reset your daily limit.",
+        "Write*a*story*or": "Bir derdini paylaş ya da reklam izleyerk günlük limitini sıfırla.",
         "Success": "Tamamlandı",
         "Logged*Out": "Çıkış Yapıldı",
         "Check*your*mailbox": "Şifre sıfırlama bağlantısı için E-posta kutunuzu kontrol edin.",
