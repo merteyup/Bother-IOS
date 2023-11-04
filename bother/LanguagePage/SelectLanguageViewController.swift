@@ -26,16 +26,12 @@ class SelectLanguageViewController: UIViewController {
     
 
     func changeLanguageTo(newLanguage: String){
-        L10n.shared.language = newLanguage;
-        self.runAfterDelay(0.3) {
-                DispatchQueue.main.async {
-                    let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
-                    let vc = storyboard.instantiateViewController(withIdentifier: "MySubclassedTabBarControllerID") as! MySubclassedTabBarController;
-                    
-                    vc.modalPresentationCapturesStatusBarAppearance = true
-                    vc.modalPresentationStyle = .overFullScreen;
-                    self.present(vc, animated: false, completion: nil);
-            }
+        DispatchQueue.main.async {
+            let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
+            let vc = storyboard.instantiateViewController(withIdentifier: "MySubclassedTabBarControllerID") as! MySubclassedTabBarController;
+            vc.modalPresentationCapturesStatusBarAppearance = true
+            vc.modalPresentationStyle = .overFullScreen;
+            self.present(vc, animated: false, completion: nil);
         }
     }
 
@@ -57,12 +53,18 @@ extension SelectLanguageViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let newLanguage = languagesCodes[indexPath.row];
-
-        print(newLanguage)
         L10n.shared.language = newLanguage
-        changeLanguageTo(newLanguage: newLanguage)
-
+        L10n.preferredLanguage = newLanguage
+        print("NewLanguagePrinted: \(newLanguage)")
+        print("NewLanguagePrinted2: \(L10n.shared.language)")
+        print("NewLanguagePrinted3: \(L10n.preferredLanguage)")
+        
+        self.runAfterDelay(0.3) {
+            self.changeLanguageTo(newLanguage: newLanguage)
+        }
+        
     }
     
 }

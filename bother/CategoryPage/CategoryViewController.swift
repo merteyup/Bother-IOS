@@ -29,7 +29,9 @@ class CategoryViewController: UIViewController {
         // TODO: ADD DELETE STORY FUNCTION IN SECOND VERSION
         L10n.supportedLanguages
         L10n.preferredLanguage
-        
+        NotificationCenter.default.addObserver(
+            self, selector: #selector(self.printSth), name: .L10nLanguageChanged, object: nil
+        )
         
         print("FuncWorked :\(L10n.supportedLanguages)")
         print("FuncWorked :\(L10n.preferredLanguage)")
@@ -53,6 +55,13 @@ class CategoryViewController: UIViewController {
       */
              
         
+    }
+    
+    
+    @objc func printSth () {
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     }
